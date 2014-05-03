@@ -1,8 +1,12 @@
 package uts.wsd;
+import javax.xml.bind.annotation.*;
 
 import java.util.ArrayList;
-
+@XmlAccessorType(XmlAccessorType.FIELD)
+@XmlRootElement(name="articles")
 public class Articles {
+	
+	@XmlElement(name="article")
 	private ArrayList<Article> articles = new ArrayList<Article>();
 
 	public ArrayList<Article> getArticles() {

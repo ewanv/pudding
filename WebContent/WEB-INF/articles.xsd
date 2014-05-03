@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.uts.edu.au/31284/wsd-diary" xmlns="http://www.uts.edu.au/31284/wsd-diary"
+	elementFormDefault="qualified">
+
+	<!-- Insert your type declarations here -->
+
+	<!-- Insert your element declarations here -->
+
+	<xs:element name="Articles">
+		<xs:complexType>
+			<xs:sequence>
+
+							<xs:element name="article">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="id" type="xs:long" />
+										<xs:element name="title" type="xs:string" />
+										<xs:element name="publishedDate" type="xs:date" />
+										<xs:element name="authorId" type="xs:long" />
+										<xs:element name="fullText" type="xs:string" />
+										<xs:element name="categoryTag" type="xs:string" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
