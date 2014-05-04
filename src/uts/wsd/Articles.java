@@ -2,8 +2,9 @@ package uts.wsd;
 import javax.xml.bind.annotation.*;
 
 import java.util.ArrayList;
-@XmlAccessorType(XmlAccessorType.FIELD)
+
 @XmlRootElement(name="articles")
+@XmlAccessorType(XmlAccessorType.FIELD)
 public class Articles {
 	
 	@XmlElement(name="article")

@@ -4,10 +4,14 @@
 	elementFormDefault="qualified">
 
 	<!-- Insert your type declarations here -->
-
+	<xs:simpleType name="date">
+	   <xs:restriction base="xs:string">
+	    <xs:pattern value="\d{1,2}/\d{1,2}/\d{4}"/>
+	   </xs:restriction>
+	</xs:simpleType>
 	<!-- Insert your element declarations here -->
 
-	<xs:element name="Authors">
+	<xs:element name="authors">
 		<xs:complexType>
 			<xs:sequence>
 
@@ -15,9 +19,9 @@
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="id" type="xs:long"/>
-										<xs:element name="dateOfBirth" type="xs:date" />
-										<xs:element name="bio" type="xs:string" />
 										<xs:element name="name" type="xs:string" />
+										<xs:element name="dateOfBirth" type="date" />
+										<xs:element name="bio" type="xs:string" />
 										<xs:element name="username" type="xs:string" />
 										<xs:element name="password" type="xs:string" />
 									</xs:sequence>

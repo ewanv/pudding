@@ -4,10 +4,16 @@
 	elementFormDefault="qualified">
 
 	<!-- Insert your type declarations here -->
+	<xs:simpleType name="date">
+	   <xs:restriction base="xs:string">
+	    <xs:pattern value="\d{1,2}/\d{1,2}/\d{4}"/>
+	   </xs:restriction>
+	</xs:simpleType>
+
 
 	<!-- Insert your element declarations here -->
 
-	<xs:element name="Articles">
+	<xs:element name="articles">
 		<xs:complexType>
 			<xs:sequence>
 
@@ -16,7 +22,7 @@
 									<xs:sequence>
 										<xs:element name="id" type="xs:long" />
 										<xs:element name="title" type="xs:string" />
-										<xs:element name="publishedDate" type="xs:date" />
+										<xs:element name="publishedDate" type="date" />
 										<xs:element name="authorId" type="xs:long" />
 										<xs:element name="fullText" type="xs:string" />
 										<xs:element name="categoryTag" type="xs:string" />

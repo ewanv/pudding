@@ -3,19 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary newsapplication.xsd">
 
-	<author>
-		<id>0</id>
-		<hame>Michael J. Fox</hame>
-		<dateOfBirth>01/01/1992</dateOfBirth>
-		<bio>Michael J. Fox, OC (born Michael Andrew Fox; June 9, 1961) is a
-			Canadian–American actor, author, comedian, producer, advocate and
-			voice-over artist.</bio>
-		<username>foxymike69</username>
-		<password>1234</password>
-	</author>
-
+<articles>
 	<article>
 		<id>0</id>
+		<title>Blah blah blah</title>
 		<publishedDate>01/01/2014</publishedDate>
 		<authorId>0</authorId>
 		<fullText>
@@ -42,5 +33,19 @@
 		</fullText>
 		<categoryTag>entertainment</categoryTag>
 	</article>
+</articles>
+
+<authors>
+	<author>
+		<id>0</id>
+		<name>Michael J. Fox</name>
+		<dateOfBirth>01/01/1992</dateOfBirth>
+		<bio>Michael J. Fox, OC (born Michael Andrew Fox; June 9, 1961) is a
+			Canadian–American actor, author, comedian, producer, advocate and
+			voice-over artist.</bio>
+		<username>foxymike69</username>
+		<password>1234</password>
+	</author>
+</authors>
 
 </newsApp>

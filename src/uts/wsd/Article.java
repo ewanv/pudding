@@ -2,12 +2,24 @@ package uts.wsd;
 
 import java.util.Date;
 
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="article")
+//@XmlAccessorType(XmlAccessorType.FIELD)
 public class Article {
+	@XmlElement(name="id")
 	private long id;
+	@XmlElement(name="title")
 	private String title;
+	@XmlElement(name="publishedDate")
 	private Date publishedDate;
+	@XmlElement(name="authorId")
 	private long authorId;
+	@XmlElement(name="fullText")
 	private String fullText;
+	@XmlElement(name="categoryTag")
 	private String categoryTag;
 	
 	public long getId() {

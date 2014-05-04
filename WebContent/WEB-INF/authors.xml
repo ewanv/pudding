@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<authors xmlns="http://www.uts.edu.au/31284/wsd-diary"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary authors.xsd">
+
+	<author>
+		<id>0</id>
+		<name>Michael J. Fox</name>
+		<dateOfBirth>01/01/1992</dateOfBirth>
+		<bio>Michael J. Fox, OC (born Michael Andrew Fox; June 9, 1961) is a
+			Canadian–American actor, author, comedian, producer, advocate and
+			voice-over artist.</bio>
+		<username>foxymike69</username>
+		<password>1234</password>
+	</author>
+
+
+</authors>
