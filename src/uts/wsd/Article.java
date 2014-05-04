@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name="article")
 //@XmlAccessorType(XmlAccessorType.FIELD)
+//^ That wasn't working so I used @XmlElement
 public class Article {
 	
 	

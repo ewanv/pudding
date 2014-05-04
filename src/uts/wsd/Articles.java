@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 @XmlRootElement(name="articles")
 //@XmlAccessorType(XmlAccessorType.FIELD)
+//^ That wasn't working so I used @XmlElement
 public class Articles {
 	
 	@XmlElement(name="article")
@@ -37,7 +38,7 @@ public class Articles {
 		//Store in xml
 		JAXBContext jc = JAXBContext.newInstance(Article.class);
 		Marshaller m = jc.createMarshaller();
-		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true); //make it pretty
+		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		m.marshal(article, new FileOutputStream("articles.xml"));
 	}
 	
