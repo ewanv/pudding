@@ -2,9 +2,11 @@ package uts.wsd;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 public class NewsApplication {
@@ -21,6 +23,10 @@ public class NewsApplication {
 		JAXBContext authorsContext= JAXBContext.newInstance(Authors.class);
 		Unmarshaller authorsUnmarshaller = authorsContext.createUnmarshaller();
 		authors = (Authors) authorsUnmarshaller.unmarshal(new FileInputStream("authors.xml"));
+	}
+	
+	public static void main(String[] args) throws FileNotFoundException, JAXBException
+	{
 	}
 
 	/*

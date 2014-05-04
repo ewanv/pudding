@@ -1,6 +1,12 @@
 package uts.wsd;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name="authors")
@@ -33,5 +39,24 @@ public class Authors {
 			}
 		}
 		return null;
+	}
+	
+	public void addAuthor(Author author) throws JAXBException, FileNotFoundException
+	{
+		authors.add(author);
+		JAXBContext jc = JAXBContext.newInstance(Authors.class);
+		Marshaller m = jc.createMarshaller();
+		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		m.marshal(author, new FileOutputStream("authors.xml"));
+	}
+	
+	public void removeAuthor(Author author)
+	{
+		authors.remove(author);
+	}
+	
+	public void removeAuthoer(String username)
+	{
+		authors.remove(findAuthor(username));
 	}
 }
