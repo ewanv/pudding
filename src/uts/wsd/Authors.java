@@ -1,8 +1,12 @@
 package uts.wsd;
 
 import java.util.ArrayList;
+import javax.xml.bind.annotation.*;
 
+@XmlRootElement(name="authors")
 public class Authors {
+	
+	@XmlElement(name="author")
 	private ArrayList<Author> authors = new ArrayList<Author>();
 
 	public ArrayList<Author> getAuthors() {
