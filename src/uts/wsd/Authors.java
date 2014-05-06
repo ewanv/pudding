@@ -44,10 +44,12 @@ public class Authors {
 	public void addAuthor(Author author) throws JAXBException, FileNotFoundException
 	{
 		authors.add(author);
+		/*
 		JAXBContext jc = JAXBContext.newInstance(Authors.class);
 		Marshaller m = jc.createMarshaller();
 		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		m.marshal(author, new FileOutputStream("authors.xml"));
+		*/
 	}
 	
 	public void removeAuthor(Author author)
