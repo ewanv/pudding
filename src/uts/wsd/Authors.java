@@ -41,6 +41,15 @@ public class Authors {
 		return null;
 	}
 	
+	public Author findAuthor(long id) {
+		for(Author author:authors) {
+			if(author.getId() == id) {
+				return author;
+			}
+		}
+		return null;
+	}
+	
 	public void addAuthor(Author author) throws JAXBException, FileNotFoundException
 	{
 		authors.add(author);
