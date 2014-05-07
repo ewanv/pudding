@@ -44,11 +44,6 @@ public class Articles implements Serializable {
 	public void addArticle(Article article) throws JAXBException, FileNotFoundException
 	{
 		articles.add(article);
-		//Store in xml
-		JAXBContext jc = JAXBContext.newInstance(Article.class);
-		Marshaller m = jc.createMarshaller();
-		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-		m.marshal(article, new FileOutputStream("articles.xml"));
 	}
 	
 	public void removeArticle(long id)
