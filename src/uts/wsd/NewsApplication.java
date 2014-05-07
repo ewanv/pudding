@@ -13,10 +13,11 @@ import javax.xml.bind.Unmarshaller;
 public class NewsApplication {
 	private Articles articles;
 	private Authors authors;
-	private String path;
+	private String articlePath;
+	private String authorPath;
 	
 	public void setArticlesFilePath(String path) throws JAXBException, IOException {
-		this.path = path;
+		this.articlePath = path;
 		//Unmarshalling
 		JAXBContext articlesContext = JAXBContext.newInstance(Articles.class);
 		Unmarshaller articlesUnmarshaller = articlesContext.createUnmarshaller();
@@ -26,7 +27,7 @@ public class NewsApplication {
 	}
 	
 	public void setAuthorsFilePath(String path) throws JAXBException, IOException {
-		this.path = path;
+		this.authorPath = path;
 		//Unmarshalling
 		JAXBContext authorsContext = JAXBContext.newInstance(Articles.class);
 		Unmarshaller authorsUnmarshaller = authorsContext.createUnmarshaller();
@@ -52,7 +53,7 @@ public class NewsApplication {
 		JAXBContext jc = JAXBContext.newInstance(Article.class);
 		Marshaller m = jc.createMarshaller();
 		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-		m.marshal(articles, new FileOutputStream("articles.xml"));
+		m.marshal(articles, new FileOutputStream(articlePath));
 	}
 
 	public Authors getAuthors() {
@@ -65,7 +66,7 @@ public class NewsApplication {
 		JAXBContext jc = JAXBContext.newInstance(Authors.class);
 		Marshaller m = jc.createMarshaller();
 		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-		m.marshal(authors, new FileOutputStream("authors.xml"));
+		m.marshal(authors, new FileOutputStream(authorPath));
 	}
 
 }
