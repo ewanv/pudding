@@ -29,7 +29,7 @@ public class NewsApplication {
 	public void setAuthorsFilePath(String path) throws JAXBException, IOException {
 		this.authorPath = path;
 		//Unmarshalling
-		JAXBContext authorsContext = JAXBContext.newInstance(Articles.class);
+		JAXBContext authorsContext = JAXBContext.newInstance(Authors.class);
 		Unmarshaller authorsUnmarshaller = authorsContext.createUnmarshaller();
 		FileInputStream fin = new FileInputStream(path); // use the given file path
 		authors = (Authors)authorsUnmarshaller.unmarshal(fin); // This loads the "users" object
