@@ -1,30 +1,26 @@
 package uts.wsd;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name="author")
-public class Author {
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Author implements Serializable {
 	
 	//========Properties===============
 	
-	@XmlElement(name="id")
 	private long id;
 	
-	@XmlElement(name="dateOfBirth")
 	private Date dateOfBirth;
 	
-	@XmlElement(name="bio")
 	private String bio;
 	
-	@XmlElement(name="name")
 	private String name;
 	
-	@XmlElement(name="username")
 	private String username;
 	
-	@XmlElement(name="password")
 	private String password;
 	
 	//=======Getters and Setters=========

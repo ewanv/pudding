@@ -1,16 +1,15 @@
 package uts.wsd;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.*;
 
 import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name="article")
-//@XmlAccessorType(XmlAccessorType.FIELD)
-//^ That wasn't working so I used @XmlElement
-public class Article {
-	
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Article implements Serializable {
 	
 	public Article()
 	{
@@ -29,22 +28,16 @@ public class Article {
 	
 	//============Properties=====================================
 	
-	@XmlElement(name="id")
 	private long id;
 	
-	@XmlElement(name="title")
 	private String title;
 	
-	@XmlElement(name="publishedDate")
 	private Date publishedDate;
 	
-	@XmlElement(name="authorId")
 	private long authorId;
 	
-	@XmlElement(name="fullText")
 	private String fullText;
 	
-	@XmlElement(name="categoryTag")
 	private String categoryTag;
 	
 	

@@ -2,6 +2,7 @@ package uts.wsd;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import javax.xml.bind.JAXBContext;
@@ -9,8 +10,9 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.*;
 
-@XmlRootElement(name="authors")
-public class Authors {
+@XmlRootElement(name="authors", namespace="http://www.uts.edu.au/31284/wsd-diary")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Authors implements Serializable {
 	
 	@XmlElement(name="author")
 	private ArrayList<Author> authors = new ArrayList<Author>();

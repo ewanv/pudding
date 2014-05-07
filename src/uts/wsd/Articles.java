@@ -7,10 +7,9 @@ import javax.xml.bind.annotation.*;
 import java.io.*;
 import java.util.ArrayList;
 
-@XmlRootElement(name="articles")
-//@XmlAccessorType(XmlAccessorType.FIELD)
-//^ That wasn't working so I used @XmlElement
-public class Articles {
+@XmlRootElement(name="articles", namespace="http://www.uts.edu.au/31284/wsd-diary")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class Articles implements Serializable {
 	
 	@XmlElement(name="article")
 	private ArrayList<Article> articles = new ArrayList<Article>();
