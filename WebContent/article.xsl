@@ -15,30 +15,25 @@
 			</body>
 		</html>
 	</xsl:template>
-	<xsl:template match="articles">
+	<xsl:template match="article">
 		<table>
 			<thead>
 				<tr>
-					<th>ID</th>
 					<th>Title</th>
 					<th>Published Date</th>
-					<th>Short Text</th>
+					<th>Text</th>
 					<th>Author</th>
 					<th>Category</th>
 				</tr>
 			</thead>
 			<tbody>
-				<xsl:apply-templates />
+				<tr>
+					<xsl:apply-templates />
+				</tr>
 			</tbody>
 		</table>
 	</xsl:template>
-	<xsl:template match="article">
-		<tr>
-			<td>#<a href="article.jsp?id={@id}"><xsl:value-of select="@id"/></a></td>
-			<xsl:apply-templates/>
-		</tr>
-	</xsl:template>
-	<xsl:template match="title|publishedDate|author|categoryTag|shortText">
+	<xsl:template match="title|publishedDate|author|categoryTag|text">
 		<td><xsl:apply-templates/></td>
 	</xsl:template>
 </xsl:stylesheet>
