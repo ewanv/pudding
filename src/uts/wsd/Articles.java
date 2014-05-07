@@ -31,6 +31,16 @@ public class Articles implements Serializable {
 		return null;
 	}
 	
+	public ArrayList<Article> findArticlesWrittenByAuthor(Author author) {
+		ArrayList<Article> articles = new ArrayList<Article>();
+		for(Article article: this.articles) {
+			if(article.getAuthorId() == author.getId()) {
+				articles.add(article);
+			}
+		}
+		return articles;
+	}
+	
 	public void addArticle(Article article) throws JAXBException, FileNotFoundException
 	{
 		articles.add(article);

@@ -33,7 +33,10 @@
 			</tbody>
 		</table>
 	</xsl:template>
-	<xsl:template match="title|publishedDate|author|categoryTag|text">
+	<xsl:template match="title|publishedDate|categoryTag|text">
 		<td><xsl:apply-templates/></td>
+	</xsl:template>
+	<xsl:template match="author">
+		<td><a href="author.jsp?id={id}"><xsl:value-of select="name"/></a></td>
 	</xsl:template>
 </xsl:stylesheet>

@@ -21,7 +21,10 @@
 				<title><%= article.getTitle() %></title>
 				<publishedDate><%= article.getPublishedDate() %></publishedDate>
 				<shortText><%= article.getFullText().substring(0, Math.min(article.getFullText().length(), 40)) %></shortText>
-				<author><%= author.getName() %></author>
+				<author>
+					<name><%= author.getName() %></name>
+					<id><%= article.getAuthorId() %></id>
+				</author>
 				<categoryTag><%= article.getCategoryTag() %></categoryTag>
 			</article>
 		<% } %>

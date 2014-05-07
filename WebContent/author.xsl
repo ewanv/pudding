@@ -15,6 +15,26 @@
 			</body>
 		</html>
 	</xsl:template>
+	<xsl:template match="author">
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Date of Birth</th>
+					<th>Bio</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><xsl:value-of select="name"/></td>
+					<td><xsl:value-of select="dateOfBirth"/></td>
+					<td><xsl:value-of select="bio"/></td>
+				</tr>		
+			</tbody>
+		</table>
+		<xsl:apply-templates />
+	</xsl:template>
+	<xsl:template match="name|dateOfBirth|bio"/>
 	<xsl:template match="articles">
 		<table>
 			<thead>
@@ -23,7 +43,6 @@
 					<th>Title</th>
 					<th>Published Date</th>
 					<th>Short Text</th>
-					<th>Author</th>
 					<th>Category</th>
 				</tr>
 			</thead>
@@ -40,8 +59,5 @@
 	</xsl:template>
 	<xsl:template match="title|publishedDate|categoryTag|shortText">
 		<td><xsl:apply-templates/></td>
-	</xsl:template>
-	<xsl:template match="author">
-		<td><a href="author.jsp?id={id}"><xsl:value-of select="name"/></a></td>
 	</xsl:template>
 </xsl:stylesheet>
