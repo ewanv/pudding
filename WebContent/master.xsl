@@ -28,7 +28,7 @@
 				<nav>
 					<ul>
 						<li>
-							<a href="articles.jsp">Home</a>
+							<a href="index.jsp">Home</a>
 						</li>
 						<xsl:choose>
 							<xsl:when test="loggedInAuthor">

@@ -5,7 +5,7 @@
 	<xsl:template name="content">
 		<xsl:choose>
 		<xsl:when test="loggedInAuthor">
-			<p>Login successful. Click <a href="articles.jsp">here</a> to return to the main page.</p>
+			<p>Login successful. Click <a href="index.jsp">here</a> to return to the main page.</p>
 		</xsl:when>
 		<xsl:otherwise>
 			<p>Password incorrect. Click <a href="login.jsp">here</a> to try again.</p>
