@@ -12,8 +12,12 @@
 <%
 	Articles articles = newsApp.getArticles();
 	Authors authors = newsApp.getAuthors();
+	Author loggedInAuthor = (Author)session.getAttribute("author");
 %>
 <page title="Articles">
+	<% if(loggedInAuthor != null) { %>
+		<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
+	<% } %>
 	<articles>
 		<% for(Article article: articles.getArticles()) { %>
 			<% Author author = authors.findAuthor(article.getAuthorId());  %>

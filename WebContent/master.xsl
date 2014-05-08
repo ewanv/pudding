@@ -30,6 +30,18 @@
 						<li>
 							<a href="articles.jsp">Home</a>
 						</li>
+						<xsl:choose>
+							<xsl:when test="loggedInAuthor">
+								<li class="pull-right">
+									<a href="#logout">Logout</a>
+								</li>
+							</xsl:when>
+							<xsl:otherwise>
+								<li class="pull-right">
+									<a href="login.jsp">Login</a>
+								</li>
+							</xsl:otherwise>
+						</xsl:choose>
 					</ul>
 				</nav>
 				<xsl:call-template name="content" />

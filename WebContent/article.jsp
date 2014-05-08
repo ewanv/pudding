@@ -14,8 +14,12 @@
 	Authors authors = newsApp.getAuthors();
 	long id = Long.parseLong(request.getParameter("id"));
 	Article article = articles.findArticle(id);
+	Author loggedInAuthor = (Author)session.getAttribute("author");
 %>
 <page title="<%= article.getTitle() %>">
+	<% if(loggedInAuthor != null) { %>
+		<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
+	<% } %>
 	<% Author author = authors.findAuthor(article.getAuthorId());  %>
 	<article id="<%= article.getId() %>">
 		<title><%= article.getTitle() %></title>

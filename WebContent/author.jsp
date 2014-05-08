@@ -15,8 +15,12 @@
 	long id = Long.parseLong(request.getParameter("id"));
 	Author author = authors.findAuthor(id);
 	ArrayList<Article> articleList = articles.findArticlesWrittenByAuthor(author);
+	Author loggedInAuthor = (Author)session.getAttribute("author");
 %>
 <page title="<%= author.getUsername() %>">
+	<% if(loggedInAuthor != null) { %>
+		<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
+	<% } %>
 	<author id="<%= author.getId() %>">
 		<name><%= author.getUsername() %></name>
 		<dateOfBirth><%= author.getDateOfBirth() %></dateOfBirth>
