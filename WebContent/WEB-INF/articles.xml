@@ -32,5 +32,34 @@
 		</fullText>
 		<categoryTag>entertainment</categoryTag>
 	</article>
+	<article>
+		<id>0</id>
+		<title>Foo Bar</title>
+		<publishedDate>01/01/2014</publishedDate>
+		<authorId>0</authorId>
+		<fullText>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
+			dignissim ante, vel facilisis urna. Donec sit amet neque blandit,
+			laoreet ipsum sit amet, imperdiet dui. Vivamus suscipit, odio in
+			lacinia adipiscing, ante ante viverra quam, vitae consequat mauris
+			dui semper nulla. Etiam aliquet arcu mauris, id egestas urna
+			sollicitudin vitae. Ut id laoreet augue. Nam congue accumsan nunc, in
+			blandit velit pretium vitae. Donec nulla odio, vulputate at massa
+			vitae, lacinia viverra libero. Sed hendrerit semper iaculis. Mauris
+			sed tortor sem. Nulla pharetra sed sem eu posuere. Praesent
+			pellentesque, est at semper mollis, justo tellus pulvinar augue, in
+			pretium dolor libero at erat. Duis at eleifend sem, vel mattis nulla.
+
+			Nulla id nibh laoreet, ultrices dui quis, luctus lorem. Praesent eget
+			tincidunt lacus. Donec sapien purus, pellentesque sed arcu nec,
+			volutpat imperdiet lorem. Sed consequat ante eget nisl varius, id
+			dignissim ante scelerisque. Mauris pretium, mi non laoreet euismod,
+			tortor lorem fringilla magna, a lacinia lacus arcu at felis.
+			Curabitur sed tempor tortor, eget mollis quam. Sed dignissim odio sed
+			tellus venenatis pretium. Phasellus pharetra ligula eget nibh luctus,
+			vitae blandit nibh consequat.
+		</fullText>
+		<categoryTag>News</categoryTag>
+	</article>
 	
 </articles>
