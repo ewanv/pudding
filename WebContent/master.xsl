@@ -4,6 +4,8 @@
 	<xsl:template match="page">
 		<html>
 			<head>
+				<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+				<script src="bootstrap/js/bootstrap.min.js" />
 				<title>
 					<xsl:value-of select="@title" />
 				</title>
@@ -25,7 +27,9 @@
 			<body>
 				<nav>
 					<ul>
-						<li><a href="articles.jsp">Home</a></li>
+						<li>
+							<a href="articles.jsp">Home</a>
+						</li>
 					</ul>
 				</nav>
 				<xsl:call-template name="content" />
