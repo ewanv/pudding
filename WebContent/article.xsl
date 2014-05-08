@@ -1,19 +1,9 @@
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-	<xsl:template match="page">
-		<html>
-			<head>
-				<title><xsl:value-of select="@title"/></title>
-				<style>
-					table { border: solid 1px black; border-collapse:collapse; }
-					table td { border: solid 1px #999; }
-				</style>
-			</head>
-			<body>
-				<xsl:apply-templates />
-			</body>
-		</html>
+	<xsl:import href="master.xsl"/>
+	<xsl:template name="content">
+		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="article">
 		<table>
