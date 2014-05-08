@@ -33,7 +33,7 @@
 						<xsl:choose>
 							<xsl:when test="loggedInAuthor">
 								<li class="pull-right">
-									<a href="#logout">Logout</a>
+									<a href="logout.jsp">Logout</a>
 								</li>
 							</xsl:when>
 							<xsl:otherwise>
