@@ -10,9 +10,24 @@
 				<style>
 					table { border: solid 1px black; border-collapse:collapse; }
 					table td { border: solid 1px #999; }
+					nav ul {
+						list-style-type:none;
+						margin:0 0 20px 0;
+						padding:10px;
+						overflow:hidden;
+						background-color:#dddddd;
+					}
+					nav li { float:left; }
+					nav li.pull-right { float:right; }
+					nav a { display:block; width:60px; }
 				</style>
 			</head>
 			<body>
+				<nav>
+					<ul>
+						<li><a href="articles.jsp">Home</a></li>
+					</ul>
+				</nav>
 				<xsl:call-template name="content" />
 			</body>
 		</html>
