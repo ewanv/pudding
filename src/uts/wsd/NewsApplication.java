@@ -50,7 +50,7 @@ public class NewsApplication {
 	public void setArticles(Articles articles) throws JAXBException, FileNotFoundException {
 		this.articles = articles;
 		//Marshalling
-		JAXBContext jc = JAXBContext.newInstance(Article.class);
+		JAXBContext jc = JAXBContext.newInstance(Articles.class);
 		Marshaller m = jc.createMarshaller();
 		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 		m.marshal(articles, new FileOutputStream(articlePath));
