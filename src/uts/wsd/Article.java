@@ -20,7 +20,8 @@ public class Article implements Serializable {
 	{
 		this.id = id;
 		this.title = title;
-		this.publishedDate = new SimpleDateFormat("dd MM yyyy").parse(publishedDate);
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		this.publishedDate = formatter.parse(publishedDate);
 		this.authorId = authorId;
 		this.fullText = fullText;
 		this.categoryTag = categoryTag;
