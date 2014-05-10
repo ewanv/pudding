@@ -15,12 +15,12 @@
 		<xs:complexType>
 			<xs:sequence>
 
-							<xs:element name="author">
+							<xs:element name="author" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="id" type="xs:long"/>
 										<xs:element name="name" type="xs:string" />
-										<xs:element name="dateOfBirth" type="date" />
+										<xs:element name="dateOfBirth" type="xs:date" />
 										<xs:element name="bio" type="xs:string" />
 										<xs:element name="username" type="xs:string" />
 										<xs:element name="password" type="xs:string" />

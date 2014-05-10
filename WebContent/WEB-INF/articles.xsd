@@ -22,7 +22,7 @@
 									<xs:sequence>
 										<xs:element name="id" type="xs:long" />
 										<xs:element name="title" type="xs:string" />
-										<xs:element name="publishedDate" type="date" />
+										<xs:element name="publishedDate" type="xs:date" />
 										<xs:element name="authorId" type="xs:long" />
 										<xs:element name="fullText" type="xs:string" />
 										<xs:element name="categoryTag" type="xs:string" />
