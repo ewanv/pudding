@@ -3,12 +3,14 @@ package uts.wsd.soap;
 import java.io.IOException;
 
 import javax.annotation.Resource;
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.servlet.ServletContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.handler.MessageContext;
 
+import uts.wsd.Articles;
 import uts.wsd.NewsApplication;
 
 @WebService
@@ -32,6 +34,33 @@ public class ArticlesSOAP {
 				application.setAttribute("newsApp", newsApp);
 			}
 			return newsApp;
+		}
+	}
+	
+	@WebMethod
+	public Articles fetchArticles() {
+		Articles articles = null;
+		
+		try {
+			articles = getNewsApp().getArticles();
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return articles;
+	}
+	
+	@WebMethod
+	public void deleteArticle(long articleID) {
+		try {
+			Articles a = getNewsApp().getArticles();
+			a.removeArticle(articleID);
+			getNewsApp().setArticles(a);
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 }
