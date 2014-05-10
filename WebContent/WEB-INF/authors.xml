@@ -4,12 +4,21 @@
 	xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary authors.xsd">
 
 	<author>
-		<id>0</id>
+		<id>1</id>
 		<name>Michael J. Fox</name>
-		<dateOfBirth>01/01/1992</dateOfBirth>
+		<dateOfBirth>1992-01-01</dateOfBirth>
 		<bio>Michael J. Fox, OC (born Michael Andrew Fox; June 9, 1961) is a
 			Canadian–American actor, author, comedian, producer, advocate and
 			voice-over artist.</bio>
+		<username>foxymike69</username>
+		<password>1234</password>
+	</author>
+	
+	<author>
+		<id>2</id>
+		<name>Ron Burgundy</name>
+		<dateOfBirth>1955-08-23</dateOfBirth>
+		<bio>Ron Burgundy is San Diego's top rated newsman in the male-dominated broadcasting of the 70's</bio>
 		<username>foxymike69</username>
 		<password>1234</password>
 	</author>

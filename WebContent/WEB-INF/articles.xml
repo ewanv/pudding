@@ -4,10 +4,10 @@
 	xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary articles.xsd">
 
 	<article>
-		<id>0</id>
+		<id>1</id>
 		<title>Blah blah blah</title>
-		<publishedDate>01/01/2014</publishedDate>
-		<authorId>0</authorId>
+		<publishedDate>2014-01-01</publishedDate>
+		<authorId>1</authorId>
 		<fullText>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
 			dignissim ante, vel facilisis urna. Donec sit amet neque blandit,
@@ -30,13 +30,13 @@
 			tellus venenatis pretium. Phasellus pharetra ligula eget nibh luctus,
 			vitae blandit nibh consequat.
 		</fullText>
-		<categoryTag>entertainment</categoryTag>
+		<categoryTag>Entertainment</categoryTag>
 	</article>
 	<article>
-		<id>0</id>
+		<id>2</id>
 		<title>Foo Bar</title>
-		<publishedDate>01/01/2014</publishedDate>
-		<authorId>0</authorId>
+		<publishedDate>2014-01-05</publishedDate>
+		<authorId>2</authorId>
 		<fullText>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
 			dignissim ante, vel facilisis urna. Donec sit amet neque blandit,
