@@ -20,8 +20,9 @@ public class Article implements Serializable {
 	{
 		this.id = id;
 		this.title = title;
+		this.publishedDateString = publishedDate;
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-		this.publishedDate = formatter.parse(publishedDate);
+		this.publishedDate = formatter.parse(this.publishedDateString);
 		this.authorId = authorId;
 		this.fullText = fullText;
 		this.categoryTag = categoryTag;
@@ -41,6 +42,8 @@ public class Article implements Serializable {
 	
 	private String categoryTag;
 	
+	private String publishedDateString;
+	
 	
 	//=========Getters and Setters================================
 	
@@ -59,9 +62,20 @@ public class Article implements Serializable {
 	public Date getPublishedDate() {
 		return publishedDate;
 	}
+	
+	public void setPublishedDateString(String publishedDateString) {
+		this.publishedDateString = publishedDateString;
+	} //Hmmm, if we overload the setPublishedDate method to handle strings (below), is the publishedDateString property redundant?
+	
+	public void setPublishedDate(String publishedDateString) throws ParseException {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		this.publishedDate = formatter.parse(publishedDateString);
+	}
+	
 	public void setPublishedDate(Date publishedDate) {
 		this.publishedDate = publishedDate;
 	}
+	
 	public long getAuthorId() {
 		return authorId;
 	}

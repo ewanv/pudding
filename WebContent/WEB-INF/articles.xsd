@@ -10,7 +10,6 @@
 	   </xs:restriction>
 	</xs:simpleType>
 
-
 	<!-- Insert your element declarations here -->
 
 	<xs:element name="articles">
