@@ -20,9 +20,8 @@ public class Article implements Serializable {
 	{
 		this.id = id;
 		this.title = title;
-		this.publishedDateString = publishedDate;
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-		this.publishedDate = formatter.parse(this.publishedDateString);
+		this.publishedDate = formatter.parse(publishedDate);
 		this.authorId = authorId;
 		this.fullText = fullText;
 		this.categoryTag = categoryTag;
@@ -34,6 +33,8 @@ public class Article implements Serializable {
 	
 	private String title;
 	
+	@XmlElement(name = "publishedDate")
+    @XmlSchemaType(name = "date")
 	private Date publishedDate;
 	
 	private long authorId;
@@ -41,8 +42,6 @@ public class Article implements Serializable {
 	private String fullText;
 	
 	private String categoryTag;
-	
-	private String publishedDateString;
 	
 	
 	//=========Getters and Setters================================
@@ -62,10 +61,6 @@ public class Article implements Serializable {
 	public Date getPublishedDate() {
 		return publishedDate;
 	}
-	
-	public void setPublishedDateString(String publishedDateString) {
-		this.publishedDateString = publishedDateString;
-	} //Hmmm, if we overload the setPublishedDate method to handle strings (below), is the publishedDateString property redundant?
 	
 	public void setPublishedDate(String publishedDateString) throws ParseException {
 		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
