@@ -21,7 +21,7 @@
 		<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
 	<% } %>
 	<% Author author = authors.findAuthor(article.getAuthorId());  %>
-	<article id="<%= article.getId() %>" deleteable="<%= loggedInAuthor.getId() == article.getAuthorId() %>">
+	<article id="<%= article.getId() %>" deleteable="<%= loggedInAuthor != null && loggedInAuthor.getId() == article.getAuthorId() %>">
 		<title><%= article.getTitle() %></title>
 		<publishedDate><%= article.getPublishedDate() %></publishedDate>
 		<text><%= article.getFullText() %></text>
