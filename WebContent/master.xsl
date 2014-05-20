@@ -12,52 +12,66 @@
 				<style>
 					table { border: solid 1px black; border-collapse:collapse; }
 					table td { border: solid 1px #999; }
-					nav ul {
-						list-style-type:none;
-						margin:0 0 20px 0;
-						padding:10px;
-						overflow:hidden;
-						background-color:#dddddd;
-					}
-					nav li { float:left; }
-					nav li.pull-right { float:right; }
-					nav a { display:block; width:60px; }
 				</style>
 			</head>
 			<body>
-				<nav>
-					<ul>
-						<li>
-							<a href="index.jsp">Home</a>
-						</li>
-						<xsl:choose>
-							<xsl:when test="loggedInAuthor">
-								<li class="pull-right">
-									<a href="logout.jsp">Logout</a>
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse"
+								data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="index.jsp">NewsApplication</a>
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="index.jsp">Articles</a>
 								</li>
-							</xsl:when>
-							<xsl:otherwise>
-								<li class="pull-right">
-									<a href="login.jsp">Login</a>
-								</li>
-							</xsl:otherwise>
-						</xsl:choose>
-					</ul>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<xsl:choose>
+									<xsl:when test="loggedInAuthor">
+										<li>
+											<a href="postArticle.jsp">Post Article</a>
+										</li>
+										<li>
+											<a href="logout.jsp">Logout</a>
+										</li>
+									</xsl:when>
+									<xsl:otherwise>
+										<li>
+											<a href="login.jsp">Login</a>
+										</li>
+									</xsl:otherwise>
+								</xsl:choose>
+							</ul>
+						</div>
+					</div>
 				</nav>
-				<xsl:call-templates name="errors" />
-				<xsl:call-template name="content" />
+				<div class="container">
+					<xsl:call-templates name="errors" />
+					<xsl:call-template name="content" />
+				</div>
 			</body>
 		</html>
 	</xsl:template>
-	
+
 	<xsl:template name="errors">
-		<xsl:apply-templates/>
+		<xsl:apply-templates />
 	</xsl:template>
-	
+
 	<xsl:template match="error">
-		<xsl:apply-templates/>
+		<xsl:apply-templates />
 	</xsl:template>
-	
+
 	<xsl:template name="content">
 		<span style="color: red">Content template is empty - overrule in page
 			template.</span>
