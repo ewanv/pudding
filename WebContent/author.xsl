@@ -6,48 +6,35 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="author">
-		<table>
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Date of Birth</th>
-					<th>Bio</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td><xsl:value-of select="name"/></td>
-					<td><xsl:value-of select="dateOfBirth"/></td>
-					<td><xsl:value-of select="bio"/></td>
-				</tr>		
-			</tbody>
-		</table>
 		<xsl:apply-templates />
 	</xsl:template>
-	<xsl:template match="name|dateOfBirth|bio"/>
+	<xsl:template match="name">
+		<h1 class="page-header"><xsl:apply-templates/></h1>
+	</xsl:template>
+	<xsl:template match="dateOfBirth">
+		<p>Born: <xsl:apply-templates /></p>
+	</xsl:template>
+	<xsl:template match="bio">
+		<p><xsl:apply-templates /></p>
+	</xsl:template>
 	<xsl:template match="articles">
-		<table>
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Title</th>
-					<th>Published Date</th>
-					<th>Short Text</th>
-					<th>Category</th>
-				</tr>
-			</thead>
-			<tbody>
-				<xsl:apply-templates />
-			</tbody>
-		</table>
+		<div class="list-group">
+			<xsl:apply-templates />
+		</div>
 	</xsl:template>
 	<xsl:template match="article">
-		<tr>
-			<td>#<a href="article.jsp?id={@id}"><xsl:value-of select="@id"/></a></td>
-			<xsl:apply-templates/>
-		</tr>
+		<a href="article.jsp?id={@id}" class="list-group-item">
+			<xsl:apply-templates select="title|shortText"/>
+			<small><xsl:apply-templates select="publishedDate|categoryTag"/></small>
+		</a>
 	</xsl:template>
-	<xsl:template match="title|publishedDate|categoryTag|shortText">
-		<td><xsl:apply-templates/></td>
+	<xsl:template match="title">
+		<h4 class="list-group-item-heading"><xsl:apply-templates /></h4>
+	</xsl:template>
+	<xsl:template match="shortText">
+		<p class="list-group-item-text"><xsl:apply-templates /></p>
+	</xsl:template>
+	<xsl:template match="publishedDate|categoryTag">
+		<xsl:apply-templates /> |
 	</xsl:template>
 </xsl:stylesheet>
