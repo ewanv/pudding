@@ -17,12 +17,12 @@
 	ArrayList<Article> articleList = articles.findArticlesWrittenByAuthor(author);
 	Author loggedInAuthor = (Author)session.getAttribute("author");
 %>
-<page title="<%= author.getUsername() %>">
+<page title="<%= author.getName() %>">
 	<% if(loggedInAuthor != null) { %>
 		<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
 	<% } %>
 	<author id="<%= author.getId() %>">
-		<name><%= author.getUsername() %></name>
+		<name><%= author.getName() %></name>
 		<dateOfBirth><%= author.getDateOfBirth() %></dateOfBirth>
 		<bio><%= author.getBio() %></bio>
 		<articles>
