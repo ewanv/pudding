@@ -22,6 +22,9 @@
 				</tr>
 			</tbody>
 		</table>
+		<xsl:if test="@deleteable = 'true'">
+			<a href="deleteArticleAction.jsp?id={@id}">Delete</a>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="title|publishedDate|categoryTag|text">
 		<td><xsl:apply-templates/></td>
