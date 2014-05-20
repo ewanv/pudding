@@ -6,30 +6,19 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="article">
-		<table>
-			<thead>
-				<tr>
-					<th>Title</th>
-					<th>Published Date</th>
-					<th>Text</th>
-					<th>Author</th>
-					<th>Category</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<xsl:apply-templates />
-				</tr>
-			</tbody>
-		</table>
-		<xsl:if test="@deleteable = 'true'">
-			<a href="deleteArticleAction.jsp?id={@id}">Delete</a>
-		</xsl:if>
-	</xsl:template>
-	<xsl:template match="title|publishedDate|categoryTag|text">
-		<td><xsl:apply-templates/></td>
-	</xsl:template>
-	<xsl:template match="author">
-		<td><a href="author.jsp?id={id}"><xsl:value-of select="name"/></a></td>
+		<h1 class="page-header">
+			<xsl:value-of select="title"/>
+			<br/>
+			<small><a href="author.jsp?id={author/id}"><xsl:value-of select="author/name"/></a></small>
+		</h1>
+		<p>
+			<xsl:value-of select="text"/>
+		</p>
+		<div class="well well-sm">
+			<xsl:value-of select="publishedDate"/> | <xsl:value-of select="categoryTag"/> |  
+			<xsl:if test="@deleteable = 'true'">
+				<a href="deleteArticleAction.jsp?id={@id}" class="btn btn-danger btn-small">Delete</a>
+			</xsl:if>
+		</div>
 	</xsl:template>
 </xsl:stylesheet>
