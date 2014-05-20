@@ -15,10 +15,14 @@
 			<xsl:value-of select="text"/>
 		</p>
 		<div class="well well-sm">
-			<xsl:value-of select="publishedDate"/> | <xsl:value-of select="categoryTag"/> |  
+			<xsl:apply-templates />  
 			<xsl:if test="@deleteable = 'true'">
 				<a href="deleteArticleAction.jsp?id={@id}" class="btn btn-danger btn-small">Delete</a>
 			</xsl:if>
 		</div>
 	</xsl:template>
+	<xsl:template match="publishedDate|categoryTag">
+		<xsl:apply-templates/> |
+	</xsl:template>
+	<xsl:template match="title|text|author"/>
 </xsl:stylesheet>
