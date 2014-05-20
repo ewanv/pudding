@@ -13,10 +13,16 @@
 		</form>
 	</xsl:template>
 	<xsl:template match="textField">
-				<tr><td><xsl:value-of select="@title"/></td><td><input type="text" name="{@name}"/></td></tr>
+				<tr><td><xsl:value-of select="@title"/></td><td><input type="text" name="{@name}" value="{@value}"/></td></tr>
+	</xsl:template>
+	<xsl:template match="textArea">
+				<tr><td><xsl:value-of select="@title"/></td><td><textarea name="{@name}"> <xsl:value-of select="@value"/></textarea></td></tr>
 	</xsl:template>
 	<xsl:template match="passwordField">
-				<tr><td><xsl:value-of select="@title"/></td><td><input type="password" name="{@name}"/></td></tr>
+				<tr><td><xsl:value-of select="@title"/></td><td><input type="password" name="{@name}" value="{@value}"/></td></tr>
+	</xsl:template>
+	<xsl:template match="hiddenField">
+				<input type="hidden" name="{@name}" value="{@value}"/>
 	</xsl:template>
 	<xsl:template match="submitButton">
 				<tr><td></td><td><input type="submit" value="{@title}"/></td></tr>

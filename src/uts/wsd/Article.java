@@ -97,4 +97,31 @@ public class Article implements Serializable {
 		return this.title;
 	}
 	
+	public boolean isValid() {
+		if(title == null || title.equals("")) {
+			return false;
+		}
+		if(fullText == null || fullText.equals("")) {
+			return false;
+		}
+		if(categoryTag == null || categoryTag.equals("")) {
+			return false;
+		}
+		return true;
+	}
+	
+	public ArrayList<String> errors() {
+		ArrayList<String> errors = new ArrayList<String>();
+		if(title == null || title.equals("")) {
+			errors.add("Title cannot be blank.");
+		}
+		if(fullText == null || fullText.equals("")) {
+			errors.add("Full Text cannot be blank.");
+		}
+		if(categoryTag == null || categoryTag.equals("")) {
+			errors.add("Category cannot be blank.");
+		}
+		return errors;
+	}
+	
 }

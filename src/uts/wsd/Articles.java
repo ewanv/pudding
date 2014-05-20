@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.*;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 @XmlRootElement(name="articles", namespace="http://www.uts.edu.au/31284/wsd-diary")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -41,8 +42,20 @@ public class Articles implements Serializable {
 		return articles;
 	}
 	
+	private long highestId() {
+		long highestId = 0;
+		for(Article article: articles) {
+			if(article.getId() > highestId) {
+				highestId = article.getId();
+			}
+		}
+		return highestId;
+	}
+	
 	public void addArticle(Article article) throws JAXBException, FileNotFoundException
 	{
+		article.setId(highestId() + 1);
+		article.setPublishedDate(Calendar.getInstance().getTime());
 		articles.add(article);
 	}
 	

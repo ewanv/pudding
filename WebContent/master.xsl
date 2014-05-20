@@ -44,11 +44,20 @@
 						</xsl:choose>
 					</ul>
 				</nav>
+				<xsl:call-templates name="errors" />
 				<xsl:call-template name="content" />
 			</body>
 		</html>
 	</xsl:template>
-
+	
+	<xsl:template name="errors">
+		<xsl:apply-templates/>
+	</xsl:template>
+	
+	<xsl:template match="error">
+		<xsl:apply-templates/>
+	</xsl:template>
+	
 	<xsl:template name="content">
 		<span style="color: red">Content template is empty - overrule in page
 			template.</span>
