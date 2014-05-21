@@ -17,7 +17,7 @@
 		<div class="well well-sm">
 			<xsl:apply-templates />  
 			<xsl:if test="@deleteable = 'true'">
-				<a href="deleteArticleAction.jsp?id={@id}" class="btn btn-danger btn-small">Delete</a>
+				<a href="deleteArticleAction.jsp?id={@id}" class="btn btn-danger btn-sm">Delete</a>
 			</xsl:if>
 		</div>
 	</xsl:template>
