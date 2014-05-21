@@ -15,66 +15,67 @@
 				</style>
 			</head>
 			<body>
-				<nav class="navbar navbar-default" role="navigation">
-					<div class="container-fluid">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse"
-								data-target="#bs-example-navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
-							<a class="navbar-brand" href="index.jsp">NewsApplication</a>
-						</div>
-
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li>
-									<a href="index.jsp">Articles</a>
-								</li>
-							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								<xsl:choose>
-									<xsl:when test="loggedInAuthor">
-										<li>
-											<a href="postArticle.jsp">Post Article</a>
-										</li>
-										<li>
-											<a href="logout.jsp">Logout</a>
-										</li>
-									</xsl:when>
-									<xsl:otherwise>
-										<li>
-											<a href="login.jsp">Login</a>
-										</li>
-									</xsl:otherwise>
-								</xsl:choose>
-							</ul>
-						</div>
-					</div>
-				</nav>
+				<xsl:call-template name="nav"/>
 				<div class="container">
-					<xsl:call-templates name="errors" />
 					<xsl:call-template name="content" />
 				</div>
 			</body>
 		</html>
 	</xsl:template>
 
-	<xsl:template name="errors">
-		<xsl:apply-templates />
+	<xsl:template match="errors">
+		<div class="alert alert-danger">
+			<ul class="list-unstyled">
+				<xsl:apply-templates />
+			</ul>
+		</div>
 	</xsl:template>
 
 	<xsl:template match="error">
-		<xsl:apply-templates />
+		<li>
+			<xsl:apply-templates />
+		</li>
 	</xsl:template>
 
 	<xsl:template name="content">
 		<span style="color: red">Content template is empty - overrule in page
 			template.</span>
+	</xsl:template>
+
+	<xsl:template name="nav">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+
+					<a class="navbar-brand" href="index.jsp">NewsApplication</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.jsp">Articles</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<xsl:choose>
+						<xsl:when test="loggedInAuthor">
+							<li>
+								<a href="postArticle.jsp">Post Article</a>
+							</li>
+							<li>
+								<a href="logout.jsp">Logout</a>
+							</li>
+						</xsl:when>
+						<xsl:otherwise>
+							<li>
+								<a href="login.jsp">Login</a>
+							</li>
+						</xsl:otherwise>
+					</xsl:choose>
+				</ul>
+			</div>
+		</nav>
 	</xsl:template>
 
 </xsl:stylesheet>

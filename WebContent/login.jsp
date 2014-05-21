@@ -34,11 +34,13 @@
 	}
 %>
 <page title="Login">
-	<errors>
-		<% for(String error: errors) { %>
-			<error><%= error %></error>
-		<% } %>
-	</errors>
+	<% if(errors.size() != 0) { %>
+		<errors>
+			<% for(String error: errors) { %>
+				<error><%= error %></error>
+			<% } %>
+		</errors>
+	<% } %>
 	<form method="post" action="login.jsp">
 		<textField title="Username" name="username" value="<%= username %>"/>
 		<passwordField title="Password" name="password"/>

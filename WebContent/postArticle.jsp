@@ -17,7 +17,7 @@
 	Author loggedInAuthor = (Author)session.getAttribute("author");
 
 	Articles articles = newsApp.getArticles();
-	ArrayList<String> errors = null;
+	ArrayList<String> errors = new ArrayList<String>();
 	String title = "";
 	String fullText = "";
 	String categoryTag = "";
@@ -38,7 +38,7 @@
 <page title="Post Article">
 	<% if(loggedInAuthor != null) { %>
 	<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
-	<% if(errors != null) { %>
+	<% if(errors.size() != 0) { %>
 		<errors>
 			<% for(String error: errors) { %>
 				<error><%= error %></error>
