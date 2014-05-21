@@ -92,6 +92,29 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
+	<xsl:template match="checkbox">
+		<xsl:variable name="class">
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<xsl:text>has-error</xsl:text>
+			</xsl:if>
+		</xsl:variable>
+		<div class="form-group {$class}">
+			<p class="col-sm-1"></p>
+			<div class="col-sm-3">
+				<label>
+					<xsl:choose>
+						<xsl:when test="@checked='true'">
+							<input type="checkbox" name="{@name}" value="true" checked="checked"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<input type="checkbox" name="{@name}" value="true"/>
+						</xsl:otherwise>
+					</xsl:choose>
+					<xsl:value-of select="@title" />
+				</label>
+			</div>
+		</div>
+	</xsl:template>
 	<xsl:template match="passwordField">
 		<xsl:variable name="class">
 			<xsl:if test="boolean(//error/@name=@name)" >

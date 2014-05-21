@@ -21,10 +21,12 @@
 	String title = "";
 	String fullText = "";
 	String categoryTag = "";
+	String generateText = "";
 	if(request.getMethod().equalsIgnoreCase("post") && loggedInAuthor != null) {
 		title = request.getParameter("title");
 		fullText = request.getParameter("fullText");
 		categoryTag = request.getParameter("categoryTag");
+		generateText = request.getParameter("generateText");
 		boolean validArticle = true;
 		if(article.isValid()) {
 			articles.addArticle(article);
@@ -48,6 +50,7 @@
 	<form method="post" action="postArticle.jsp">
 		<textField title="Title" name="title" value="<%= title %>"/>
 		<textArea title="Full Text" name="fullText" value="<%= fullText %>"/>
+		<checkbox title="Generate article text" name="generateText" checked="<%= generateText %>"/>
 		<selectField title="Category" name="categoryTag" value="<%= categoryTag %>">
 			<selectOption value="News" selected="<%= categoryTag.equals("News") %>">News</selectOption>
 			<selectOption value="Entertainment" selected="<%= categoryTag.equals("Entertainment") %>">Entertainment</selectOption>
