@@ -5,6 +5,19 @@
 	<xsl:template name="content">
 		<xsl:apply-templates/>
 	</xsl:template>
+	<xsl:template match="errors">
+		<div class="alert alert-danger">
+			<ul class="list-unstyled">
+				<xsl:apply-templates />
+			</ul>
+		</div>
+	</xsl:template>
+
+	<xsl:template match="error">
+		<li>
+			<xsl:apply-templates />
+		</li>
+	</xsl:template>
 	<xsl:template match="form">
 		<form method="{@method}" action="{@action}" class="form-horizontal">
 			<xsl:apply-templates/>
