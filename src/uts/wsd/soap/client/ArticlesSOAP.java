@@ -8,6 +8,6 @@
 package uts.wsd.soap.client;
 
 public interface ArticlesSOAP extends java.rmi.Remote {
-    public void deleteArticle(long arg0) throws java.rmi.RemoteException;
     public uts.wsd.soap.client.Article[] fetchArticles() throws java.rmi.RemoteException;
+    public void deleteArticle(long arg0) throws java.rmi.RemoteException;
 }

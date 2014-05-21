@@ -12,7 +12,7 @@ public class Article  implements java.io.Serializable {
 
     private java.lang.String title;
 
-    private java.util.Calendar publishedDate;
+    private java.util.Date publishedDate;
 
     private long authorId;
 
@@ -26,7 +26,7 @@ public class Article  implements java.io.Serializable {
     public Article(
            long id,
            java.lang.String title,
-           java.util.Calendar publishedDate,
+           java.util.Date publishedDate,
            long authorId,
            java.lang.String fullText,
            java.lang.String categoryTag) {
@@ -84,7 +84,7 @@ public class Article  implements java.io.Serializable {
      * 
      * @return publishedDate
      */
-    public java.util.Calendar getPublishedDate() {
+    public java.util.Date getPublishedDate() {
         return publishedDate;
     }
 
@@ -94,7 +94,7 @@ public class Article  implements java.io.Serializable {
      * 
      * @param publishedDate
      */
-    public void setPublishedDate(java.util.Calendar publishedDate) {
+    public void setPublishedDate(java.util.Date publishedDate) {
         this.publishedDate = publishedDate;
     }
 
@@ -235,7 +235,7 @@ public class Article  implements java.io.Serializable {
         elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("publishedDate");
         elemField.setXmlName(new javax.xml.namespace.QName("", "publishedDate"));
-        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "dateTime"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "date"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
         typeDesc.addFieldDesc(elemField);

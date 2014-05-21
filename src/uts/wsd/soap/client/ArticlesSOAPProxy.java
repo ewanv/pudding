@@ -44,16 +44,16 @@ public class ArticlesSOAPProxy implements uts.wsd.soap.client.ArticlesSOAP {
     return articlesSOAP;
   }
   
-  public void deleteArticle(long arg0) throws java.rmi.RemoteException{
-    if (articlesSOAP == null)
-      _initArticlesSOAPProxy();
-    articlesSOAP.deleteArticle(arg0);
-  }
-  
   public uts.wsd.soap.client.Article[] fetchArticles() throws java.rmi.RemoteException{
     if (articlesSOAP == null)
       _initArticlesSOAPProxy();
     return articlesSOAP.fetchArticles();
+  }
+  
+  public void deleteArticle(long arg0) throws java.rmi.RemoteException{
+    if (articlesSOAP == null)
+      _initArticlesSOAPProxy();
+    articlesSOAP.deleteArticle(arg0);
   }
   
   
