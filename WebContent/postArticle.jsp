@@ -48,7 +48,14 @@
 	<form method="post" action="postArticle.jsp">
 		<textField title="Title" name="title" value="<%= title %>"/>
 		<textArea title="Full Text" name="fullText" value="<%= fullText %>"/>
-		<textField title="Category" name="categoryTag" value="<%= categoryTag %>"/>
+		<selectField title="Category" name="categoryTag" value="<%= categoryTag %>">
+			<selectOption value="News" selected="<%= categoryTag.equals("News") %>">News</selectOption>
+			<selectOption value="Entertainment" selected="<%= categoryTag.equals("Entertainment") %>">Entertainment</selectOption>
+			<selectOption value="Sport" selected="<%= categoryTag.equals("Sport") %>">Sport</selectOption>
+			<selectOption value="Business" selected="<%= categoryTag.equals("Business") %>">Business</selectOption>
+			<selectOption value="Finance" selected="<%= categoryTag.equals("Finance") %>">Finance</selectOption>
+			<selectOption value="Technology" selected="<%= categoryTag.equals("Technology") %>">Technology</selectOption>
+		</selectField>
 		<hiddenField name="authorId" value="<%= loggedInAuthor.getId() %>"/>
 		<submitButton title="Post Article"/>
 	</form>

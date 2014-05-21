@@ -62,6 +62,36 @@
 			</xsl:if>
 		</div>
 	</xsl:template>
+	<xsl:template match="selectField">
+		<xsl:variable name="class">
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<xsl:text>has-error</xsl:text>
+			</xsl:if>
+		</xsl:variable>
+		<div class="form-group {$class}">
+			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
+			<div class="col-sm-3">
+				<select name="{@name}" class="form-control">
+					<xsl:apply-templates/>
+				</select>
+			</div>
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<span class="help-block">
+					<xsl:value-of select="//error[@name=current()/@name]" />
+				</span>
+			</xsl:if>
+		</div>
+	</xsl:template>
+	<xsl:template match="selectOption">
+		<xsl:choose>
+			<xsl:when test="@selected='true'">
+				<option value="{@value}" selected="selected"><xsl:apply-templates/></option>
+			</xsl:when>
+			<xsl:otherwise>
+				<option value="{@value}"><xsl:apply-templates/></option>
+			</xsl:otherwise>
+		</xsl:choose>
+	</xsl:template>
 	<xsl:template match="passwordField">
 		<xsl:variable name="class">
 			<xsl:if test="boolean(//error/@name=@name)" >
