@@ -6,25 +6,44 @@
 		<xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="form">
-		<form method="{@method}" action="{@action}">
-			<table>
-				<xsl:apply-templates/>
-			</table>
+		<form method="{@method}" action="{@action}" class="form-horizontal">
+			<xsl:apply-templates/>
 		</form>
 	</xsl:template>
 	<xsl:template match="textField">
-				<tr><td><xsl:value-of select="@title"/></td><td><input type="text" name="{@name}" value="{@value}"/></td></tr>
+		<div class="form-group">
+			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
+			<div class="col-sm-3">
+				<input type="text" name="{@name}" value="{@value}" class="form-control"/>
+			</div>
+		</div>
 	</xsl:template>
 	<xsl:template match="textArea">
-				<tr><td><xsl:value-of select="@title"/></td><td><textarea name="{@name}"> <xsl:value-of select="@value"/></textarea></td></tr>
+		<div class="form-group">
+			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
+			<div class="col-sm-3">
+				<textarea name="{@name}" class="form-control">
+				<xsl:value-of select="@value"/>
+				</textarea>
+			</div>
+		</div>
 	</xsl:template>
 	<xsl:template match="passwordField">
-				<tr><td><xsl:value-of select="@title"/></td><td><input type="password" name="{@name}" value="{@value}"/></td></tr>
+		<div class="form-group">
+			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
+			<div class="col-sm-3">
+				<input type="password" name="{@name}" value="{@value}" class="form-control"/>
+			</div>
+		</div>
 	</xsl:template>
 	<xsl:template match="hiddenField">
-				<input type="hidden" name="{@name}" value="{@value}"/>
+		<input type="hidden" name="{@name}" value="{@value}"/>
 	</xsl:template>
 	<xsl:template match="submitButton">
-				<tr><td></td><td><input type="submit" value="{@title}"/></td></tr>
+		<div class="form-group">
+			<div class="col-sm-3 col-sm-offset-1">
+				<input type="submit" value="{@title}" class="btn btn-primary" />
+			</div>
+		</div>
 	</xsl:template>
 </xsl:stylesheet>
