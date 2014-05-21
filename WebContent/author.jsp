@@ -14,9 +14,15 @@
 	Authors authors = newsApp.getAuthors();
 	long id = Long.parseLong(request.getParameter("id"));
 	Author author = authors.findAuthor(id);
-	ArrayList<Article> articleList = articles.findArticlesWrittenByAuthor(author);
-	Author loggedInAuthor = (Author)session.getAttribute("author");
+	ArrayList<Article> articleList = null;
+	if(author == null) {
+		response.sendError(HttpServletResponse.SC_NOT_FOUND, "Author not found");
+	} else {
+		articleList = articles.findArticlesWrittenByAuthor(author);
+	}
+		Author loggedInAuthor = (Author)session.getAttribute("author");
 %>
+<% if(author != null) { %>
 <page title="<%= author.getName() %>">
 	<% if(loggedInAuthor != null) { %>
 		<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
@@ -37,3 +43,4 @@
 		</articles>
 	</author>
 </page>
+<% } %>

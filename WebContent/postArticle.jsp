@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="form.xsl"?>
 <%@page import="com.sun.xml.ws.util.StringUtils"%>
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.*"%>
 <%@page import="uts.wsd.*"%>
 <%@page contentType="application/xml"%>
 <% String authorsFilePath = application.getRealPath("WEB-INF/authors.xml"); %>
@@ -17,11 +17,11 @@
 	Author loggedInAuthor = (Author)session.getAttribute("author");
 
 	Articles articles = newsApp.getArticles();
-	ArrayList<String> errors = new ArrayList<String>();
+	HashMap<String,String> errors = new HashMap<String,String>();
 	String title = "";
 	String fullText = "";
 	String categoryTag = "";
-	if(request.getMethod().equalsIgnoreCase("post")) {
+	if(request.getMethod().equalsIgnoreCase("post") && loggedInAuthor != null) {
 		title = request.getParameter("title");
 		fullText = request.getParameter("fullText");
 		categoryTag = request.getParameter("categoryTag");
@@ -40,8 +40,8 @@
 	<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
 	<% if(errors.size() != 0) { %>
 		<errors>
-			<% for(String error: errors) { %>
-				<error><%= error %></error>
+			<% for(String errorKey: errors.keySet()) { %>
+				<error name="<%= errorKey %>"><%= errors.get(errorKey) %></error>
 			<% } %>
 		</errors>
 	<% } %>

@@ -15,20 +15,25 @@
 	long id = Long.parseLong(request.getParameter("id"));
 	Article article = articles.findArticle(id);
 	Author loggedInAuthor = (Author)session.getAttribute("author");
+	if(article == null) {
+		response.sendError(HttpServletResponse.SC_NOT_FOUND, "Article not found");
+	}
 %>
-<page title="<%= article.getTitle() %>">
-	<% if(loggedInAuthor != null) { %>
-		<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
-	<% } %>
-	<% Author author = authors.findAuthor(article.getAuthorId());  %>
-	<article id="<%= article.getId() %>" deleteable="<%= loggedInAuthor != null && loggedInAuthor.getId() == article.getAuthorId() %>">
-		<title><%= article.getTitle() %></title>
-		<publishedDate><%= article.getPublishedDate() %></publishedDate>
-		<text><%= article.getFullText() %></text>
-		<author>
-			<name><%= author.getName() %></name>
-			<id><%= article.getAuthorId() %></id>
-		</author>
-		<categoryTag><%= article.getCategoryTag() %></categoryTag>
-	</article>
-</page>
+<% if(article != null) { %>
+	<page title="<%= article.getTitle() %>">
+		<% if(loggedInAuthor != null) { %>
+			<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
+		<% } %>
+		<% Author author = authors.findAuthor(article.getAuthorId());  %>
+		<article id="<%= article.getId() %>" deleteable="<%= loggedInAuthor != null && loggedInAuthor.getId() == article.getAuthorId() %>">
+			<title><%= article.getTitle() %></title>
+			<publishedDate><%= article.getPublishedDate() %></publishedDate>
+			<text><%= article.getFullText() %></text>
+			<author>
+				<name><%= author.getName() %></name>
+				<id><%= article.getAuthorId() %></id>
+			</author>
+			<categoryTag><%= article.getCategoryTag() %></categoryTag>
+		</article>
+	</page>
+<% } %>

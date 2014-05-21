@@ -8,12 +8,13 @@
 	<xsl:template match="errors">
 		<div class="alert alert-danger">
 			<ul class="list-unstyled">
-				<xsl:apply-templates />
+				Form contains errors!
+				<xsl:apply-templates select="error[@name='page']"/>
 			</ul>
 		</div>
 	</xsl:template>
 
-	<xsl:template match="error">
+	<xsl:template match="error[@name='page']">
 		<li>
 			<xsl:apply-templates />
 		</li>
@@ -24,29 +25,59 @@
 		</form>
 	</xsl:template>
 	<xsl:template match="textField">
-		<div class="form-group">
+		<xsl:variable name="class">
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<xsl:text>has-error</xsl:text>
+			</xsl:if>
+		</xsl:variable>
+		<div class="form-group {$class}">
 			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
 			<div class="col-sm-3">
 				<input type="text" name="{@name}" value="{@value}" class="form-control"/>
 			</div>
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<span class="help-block">
+					<xsl:value-of select="//error[@name=current()/@name]"/>
+				</span>
+			</xsl:if>
 		</div>
 	</xsl:template>
 	<xsl:template match="textArea">
-		<div class="form-group">
+		<xsl:variable name="class">
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<xsl:text>has-error</xsl:text>
+			</xsl:if>
+		</xsl:variable>
+		<div class="form-group {$class}">
 			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
 			<div class="col-sm-3">
 				<textarea name="{@name}" class="form-control">
 				<xsl:value-of select="@value"/>
 				</textarea>
 			</div>
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<span class="help-block">
+					<xsl:value-of select="//error[@name=current()/@name]"/>
+				</span>
+			</xsl:if>
 		</div>
 	</xsl:template>
 	<xsl:template match="passwordField">
-		<div class="form-group">
+		<xsl:variable name="class">
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<xsl:text>has-error</xsl:text>
+			</xsl:if>
+		</xsl:variable>
+		<div class="form-group {$class}">
 			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
 			<div class="col-sm-3">
 				<input type="password" name="{@name}" value="{@value}" class="form-control"/>
 			</div>
+			<xsl:if test="boolean(//error/@name=@name)" >
+				<span class="help-block">
+					<xsl:value-of select="//error[@name=current()/@name]"/>
+				</span>
+			</xsl:if>
 		</div>
 	</xsl:template>
 	<xsl:template match="hiddenField">

@@ -9,7 +9,7 @@
 </jsp:useBean>
 <%
 	session.setAttribute("author", null);
-	ArrayList<String> errors = new ArrayList<String>();
+	HashMap<String,String> errors = new HashMap<String,String>();
 	String username = "";
 	String password = "";
 	if(request.getMethod().equalsIgnoreCase("post")) {
@@ -22,13 +22,13 @@
 			response.sendRedirect("index.jsp");
 		} else {
 			if(username == null || username.equals("")){
-				errors.add("Username can't be blank");
+				errors.put("username","Username can't be blank");
 			}
 			if(password == null || password.equals("")){
-				errors.add("Password can't be blank");
+				errors.put("password","Password can't be blank");
 			}
 			if(errors.size() == 0) { //If password and username are present
-				errors.add("Username or password incorrect");
+				errors.put("page","Username or password incorrect");
 			}
 		}
 	}
@@ -36,8 +36,8 @@
 <page title="Login">
 	<% if(errors.size() != 0) { %>
 		<errors>
-			<% for(String error: errors) { %>
-				<error><%= error %></error>
+			<% for(String errorKey: errors.keySet()) { %>
+				<error name="<%= errorKey %>"><%= errors.get(errorKey) %></error>
 			<% } %>
 		</errors>
 	<% } %>

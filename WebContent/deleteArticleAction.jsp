@@ -12,9 +12,13 @@
 
 	Articles articles = newsApp.getArticles();
 	Article article = articles.findArticle(Long.parseLong(request.getParameter("id")));
-	if(article.getAuthorId() == loggedInAuthor.getId()) {
-		articles.removeArticle(article);
-		newsApp.setArticles(articles);
+	if(article == null) {
+		response.sendError(HttpServletResponse.SC_NOT_FOUND, "Article not found");
+	} else {
+		if(article.getAuthorId() == loggedInAuthor.getId()) {
+			articles.removeArticle(article);
+			newsApp.setArticles(articles);
+		}
+		response.sendRedirect("index.jsp");
 	}
-	response.sendRedirect("index.jsp");
 %>
