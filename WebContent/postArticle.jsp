@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="form.xsl"?>
+<%@page import="uts.wsd.rest.LoremIpsum4J"%>
 <%@page import="com.sun.xml.ws.util.StringUtils"%>
 <%@page import="java.util.*"%>
 <%@page import="uts.wsd.*"%>
@@ -27,6 +28,14 @@
 		fullText = request.getParameter("fullText");
 		categoryTag = request.getParameter("categoryTag");
 		generateText = request.getParameter("generateText");
+		if (generateText != null && generateText.equals("true")) {
+			LoremIpsum4J lipsumGenerator = new LoremIpsum4J();
+			String[] paragraphs = lipsumGenerator.getParagraphs(5);
+			for (int i = 0; i < paragraphs.length; i++) {
+				fullText = paragraphs[i];
+			}
+			article.setFullText(fullText);
+		}
 		boolean validArticle = true;
 		if(article.isValid()) {
 			articles.addArticle(article);
