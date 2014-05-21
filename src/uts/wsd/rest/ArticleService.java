@@ -12,11 +12,25 @@ import javax.xml.bind.JAXBException;
 
 import uts.wsd.*;
 
+/**
+ * This class provides the REST service functionality for searching articles
+ * @author Michael Jacobson
+ */
 @Path("/articles")
 public class ArticleService {
+	
+	/**
+	 * Current application instance
+	 */
 	@Context
 	private ServletContext application;
 
+	/** 
+	 * This method will retrieve the news application from the current application instance
+	 * @return Current NewsApplication object to use to access data
+	 * @throws JAXBException
+	 * @throws IOException
+	 */
 	private NewsApplication getNewsApp() throws JAXBException, IOException {
 		synchronized (application) {
 			NewsApplication newsApp = (NewsApplication) application
@@ -33,6 +47,15 @@ public class ArticleService {
 		}
 	}
 
+	/**
+	 * This method will filter all articles in the news application and return those matching the criteria
+	 * @param category
+	 * @param startDate
+	 * @param endDate
+	 * @return XML containing the articles matching the specified criteria
+	 * @throws JAXBException
+	 * @throws IOException
+	 */
 	@Path("search")
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
@@ -40,8 +63,9 @@ public class ArticleService {
 			@QueryParam("startDate") String startDate,
 			@QueryParam("endDate") String endDate) throws JAXBException,
 			IOException {
-		// Return all articles if no parameters are given
+		
 		if (category == null && startDate == null && endDate == null) {
+			// Return all articles if no parameters are given
 			return getNewsApp().getArticles();
 		}
 
@@ -51,22 +75,27 @@ public class ArticleService {
 
 		try {
 			if (startDate != null) {
+				// Parse startDate to create a date object
 				firstDate = formatter.parse(startDate);
 			}
 		} catch (ParseException e) {
+			// If the date cannot be parsed then set it to null
 			firstDate = null;
 			e.printStackTrace();
 		}
 		
 		try {
 			if (endDate != null) {
+				// Parse endDate to create date object
 				lastDate = formatter.parse(endDate);
 			}
 		} catch (ParseException e) {
+			// If the date object cannot be parsed then set it to null
 			lastDate = null;
 			e.printStackTrace();
 		}
 		
+		// Create a list of all articles matching the criteria
 		Articles filteredArticles = new Articles();
 		
 		for (Article article : getNewsApp().getArticles().getArticles()) {
