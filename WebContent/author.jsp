@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="author.xsl"?>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.*"%>
 <%@ page import="uts.wsd.*" %>
 <%@page contentType="application/xml"%>
@@ -35,7 +36,7 @@
 			<% for(Article article: articleList) { %>
 				<article id="<%= article.getId() %>">
 					<title><%= article.getTitle() %></title>
-					<publishedDate><%= article.getPublishedDate() %></publishedDate>
+					<publishedDate><%= new SimpleDateFormat("EEEEE, d MMMMM yyyy").format(article.getPublishedDate()) %></publishedDate>
 					<shortText><%= article.getFullText().substring(0, Math.min(article.getFullText().length(), 40)) %></shortText>
 					<categoryTag><%= article.getCategoryTag() %></categoryTag>
 				</article>
