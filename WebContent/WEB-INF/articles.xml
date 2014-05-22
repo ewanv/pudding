@@ -1,65 +1,557 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<articles xmlns="http://www.uts.edu.au/31284/wsd-diary"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary articles.xsd">
-
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:articles xmlns:ns2="http://www.uts.edu.au/31284/wsd-diary">
 	<article>
-		<id>1</id>
-		<title>Blah blah blah</title>
-		<publishedDate>2014-01-01</publishedDate>
+		<id>7</id>
+		<title>Hazy morning for Sydney as smoke hangs over city</title>
+		<publishedDate>2014-05-22+10:00</publishedDate>
+		<authorId>2</authorId>
+		<fullText>Sydneysiders awoke to a red dawn this morning as the city
+			was swamped by smoke caused by fog and several hazard reduction
+			burns.
+			The NSW Rural Fire Service said the hazy pall was a result of a number
+			of burns they have conducted in the greater Sydney area over the past
+			week.
+			People with asthma or lung conditions were advised to stay indoors due to
+			the high smoke.
+			The NSW RFS said the smoke would start dissipating by mid-morning and
+			was expected to clear by lunch time.
+			Hazard reduction burns have been taking place in Ku-ring-gai, the
+			Hawkesbury and the Blue Mountains over the past few days.
+			
+			
+			Read more:
+			http://www.smh.com.au/nsw/hazy-morning-for-sydney-as-smoke-hangs-over-city-20140522-zrkje.html#ixzz32OzsnvPE
+		</fullText>
+		<categoryTag>News</categoryTag>
+	</article>
+	<article>
+		<id>8</id>
+		<title>Call to halt 'white elephant' bridge across Anzac Parade
+		</title>
+		<publishedDate>2014-05-22+10:00</publishedDate>
+		<authorId>2</authorId>
+		<fullText>Support is crumbling for a $25 million bridge across Anzac
+			Parade near Sydney Cricket Ground, with transport lobby groups and
+			the City of Sydney calling for an urgent halt to
+			construction.
+			The government is attempting to get the bridge built in time for the
+			2015 Cricket World Cup, and this week said building work had started
+			on the project. But plans for the bridge continue to draw the ire of
+			locals and people who might be expected to use it, and key backers
+			the government had been relying on are pulling away.
+			One of the main complaints about the bridge is that it is not being
+			built where people want to walk. The majority of people who walk
+			between Central Station and the SCG cross Anzac Parade at Fitzroy
+			Street, one block away from where the bridge is planned.
+			Roads and Maritime Services says it will use signs to direct
+			pedestrians to the bridge.
+			Another complaint about the bridge, to be named after former test cricketer
+			Albert ''Tibby'' Cotter, is that it will not connect to the cycleway
+			on Anzac Parade.
+			In promoting the bridge plan in April, Roads and Maritime Services
+			said: ''Bicycle NSW and the City of Sydney have been consulted and
+			are supportive of the plan.''
+			Both organisations want construction suspended.
+			''It needs further review,'' said Sophie Bartho, communications director
+			at Bicycle NSW. ''The fact that the bridge and the existing cycle
+			path are not directly connected is a major concern.''
+			Lord mayor Clover Moore has written to the government requesting it call
+			a halt to work on the bridge, which risked becoming ''an expensive
+			white elephant''.
+			''I was shocked to find Roads and Maritime Services approved the
+			proposed bridge on May 14 with two minor design changes,'' Cr Moore
+			said. ''Just days later early work has begun, blocking off a large
+			section of parkland.''
+			On Monday Roads Minister Duncan Gay, Sports Minister Stuart Ayres and
+			chairman of the SCG Trust Tony Shepherd announced the start of work
+			on the project. The SCG Trust partly supports the project so it can
+			use the western side of Moore Park for car parking. The bridge would
+			allow people who have parked on Moore Park to cross easily to the
+			SCG.
+			Speaking in Parliament, Mr Gay said ''everyone likes'' the bridge. ''It has a
+			good name, it is a great design and it is in the right
+			place.''
+			The bridge is also opposed by the Paddington Society, Action for Public
+			Transport, the Centennial Park Residents Association and
+			BikeSydney.
+			A spokeswoman for Mr Gay said the government had already signed
+			contracts for early building works on the project.
+			
+			
+			Read more:
+			http://www.smh.com.au/nsw/call-to-halt-white-elephant-bridge-across-anzac-parade-20140521-38p40.html#ixzz32P0HMc7Y
+		</fullText>
+		<categoryTag>News</categoryTag>
+	</article>
+	<article>
+		<id>9</id>
+		<title>Michael Rogers wins stage, Cadel Evans still leads Giro
+			d'Italia</title>
+		<publishedDate>2014-05-20+10:00</publishedDate>
+		<authorId>2</authorId>
+		<fullText>Australia's Michael Rogers has won the 11th stage of the
+			Giro d'Italia as his compatriot Cadel Evans retained the leader's
+			pink jersey.
+			Rogers, riding for the Tinkoff team, came home 10 seconds ahead of the pack
+			at the end of the 249km ride from Collecchio to Savona after breaking
+			clear on the final descent, 20km from the finish.
+			Simon Geschke of Germany claimed second place in front of Italy's Enrico
+			Battaglin and Wilco Kelderman of the Netherlands.
+			
+			
+			For the 34-year-old Rogers, it was a first stage win in a Grand Tour and
+			his first success since his return to the sport following a positive
+			test for clenbuterol last year.
+			Rogers had always claimed that his positive test was due to eating
+			contaminated food and he was later cleared to return to racing by the
+			International Cycling Union (UCI) in time to compete in the
+			Liege-Bastogne-Liege classic in April.
+			"It was one of the hardest rides of my life, for sure," he
+			said.
+			"At the top of the climb, I realised that most guys in the group were GC
+			contenders and this was the time to jump. So I went. From then on, it
+			was all about keeping my head down, pedalling away and I guess I was
+			a little lucky that the GC guys were probably looking at each other,
+			hesitating a bit."
+			The victory for Rogers, who dedicated it to his Italian wife, continues
+			Australia's fine record in this year's Giro.
+			The Orica-GreenEdge team won the opening stage team time trial and
+			Michael Matthews triumphed on the sixth stage, while Matthews held
+			the pink jersey from the second stage until it was seized by Evans
+			after stage eight.
+			Evans, of the BMC team, will now hope to extend his lead of 57 seconds down
+			to Colombia's Rigoberto Uran in Thursday's 12th stage, a 41.9km
+			individual time trial from Barbaresco to Barolo.
+			"The time trial is always the race of truth," Evans said. "We have had a
+			difficult first week.
+			"Now we have also had a very long and intense stage. I think that will
+			probably have a little bit of an effect on the
+			performances.
+			"For me, it is one of the key stages and on paper, it looks like it suits
+			me. I go into it feeling pretty well, feeling ok."
+			There were several falls on Wednesday's stage, and Germany's Fabian
+			Wegmann was forced to abandon the race along with Australian Luke
+			Durbridge.
+			Former leader Matthews pulled out of the race at the start of the day due
+			to injury.
+			
+			
+			Read more:
+			http://www.smh.com.au/sport/cycling/michael-rogers-wins-stage-cadel-evans-still-leads-giro-ditalia-20140522-zrkjf.html#ixzz32P0qWUBN
+		</fullText>
+		<categoryTag>Sport</categoryTag>
+	</article>
+	<article>
+		<id>10</id>
+		<title>Jedinak to set the tone for success as Socceroos captain
+		</title>
+		<publishedDate>2014-04-28+10:00</publishedDate>
 		<authorId>1</authorId>
-		<fullText>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
-			dignissim ante, vel facilisis urna. Donec sit amet neque blandit,
-			laoreet ipsum sit amet, imperdiet dui. Vivamus suscipit, odio in
-			lacinia adipiscing, ante ante viverra quam, vitae consequat mauris
-			dui semper nulla. Etiam aliquet arcu mauris, id egestas urna
-			sollicitudin vitae. Ut id laoreet augue. Nam congue accumsan nunc, in
-			blandit velit pretium vitae. Donec nulla odio, vulputate at massa
-			vitae, lacinia viverra libero. Sed hendrerit semper iaculis. Mauris
-			sed tortor sem. Nulla pharetra sed sem eu posuere. Praesent
-			pellentesque, est at semper mollis, justo tellus pulvinar augue, in
-			pretium dolor libero at erat. Duis at eleifend sem, vel mattis nulla.
-
-			Nulla id nibh laoreet, ultrices dui quis, luctus lorem. Praesent eget
-			tincidunt lacus. Donec sapien purus, pellentesque sed arcu nec,
-			volutpat imperdiet lorem. Sed consequat ante eget nisl varius, id
-			dignissim ante scelerisque. Mauris pretium, mi non laoreet euismod,
-			tortor lorem fringilla magna, a lacinia lacus arcu at felis.
-			Curabitur sed tempor tortor, eget mollis quam. Sed dignissim odio sed
-			tellus venenatis pretium. Phasellus pharetra ligula eget nibh luctus,
-			vitae blandit nibh consequat.
+		<fullText>Socceroos midfielder Mile Jedinak has promised to âlead by
+			exampleâ at next monthâs World Cup after being appointed
+			Australian captain on Wednesday.
+			Jedinak joins one of Australian football's most exclusive clubs, becoming
+			only the fourth man to lead the Socceroos to the global showpiece,
+			joining Peter Wilson (1974), Mark Viduka (2006) and Lucas Neill
+			(2010).
+			The 29-year-old has enjoyed a meteoric rise to fame in recent years,
+			crowned by an exceptional season with Crystal Palace - the club he
+			captained to promotion last season and then again in the English
+			Premier League in the campaign just finished.
+			Jedinak said he wanted to bring his leadership qualities honed at Selhurst
+			Park to the Socceroos as they front three of the best teams in Brazil
+			in the group stages: Chile, The Netherlands and Spain.
+			âItâs probably the biggest honour Iâll receive so Iâm really
+			looking forward to the challenge ahead,â he said. âI tend to lead
+			by example. Itâs what I know, itâs what I do [and] you might
+			alter and be a bit more vocal than at other times. I always try to
+			set an example, not just for inexperienced members but for everybody,
+			by how I conduct myself.â
+			Jedinak will be joined by two vice-captains, Tim Cahill and Mark Bresciano,
+			who will each be competing in their third and final World Cup.
+			Jedinak, with 43 caps to his name, will be going to his second,
+			although his last experience was not so positive - playing only in
+			the Socceroos' 4-0 thumping at the hands of Germany four years
+			ago.
+			Socceroos boss Ange Postecoglou hailed Jedinakâs âunbelievableâ club
+			season as the major reason he was given the nod.
+			âHeâs led from the front, heâs led a group of players in a team in the
+			English Premier League which many had written off,â he said. âA
+			lot of those characteristics apply to us right now. I know that when
+			we get to Brazil and face up to the challenges we need to face up to,
+			Mile and Timmy and Mark will be leading from the front.â
+			Postecoglou hailed the location of the announcement - Terrigal on the
+			Central Coast - as fitting given it was where Jedinak began his
+			A-League career, famously, on a short-term contract with the Mariners
+			in 2006. He then left for Turkey in 2009 before making his big move
+			to England in 2011.
+			âItâs quite significant weâre making this announcement in this city
+			because five years ago this is the place where Mile put his head down
+			and, with a determined attitude, he began climbing the football
+			ladder,â Postecoglou said. âAnd in the past 12 months, I think we
+			still significantly underplay what a year heâs had in one of the
+			toughest leagues in the world. In my mind, heâs probably been one
+			of the top five Australian sportsmen in the past 12 months with what
+			heâs achieved.â
+			Bresciano said he, Jedinak and Cahill âwould try to lead the team all
+			togetherâ.
+			âWeâll try to bring our experience into the team and support the younger
+			boys,â he said. âTheyâve been doing very well. Now our main
+			task is to get there, prepare as best we can and help them settle
+			into a World Cup.â
+			While Jedinak first captained the Socceroos in their most recent friendly,
+			a 4-3 loss against Ecuador, he is in doubt to play in the match
+			against South Africa in Sydney next Monday. He injured himself in the
+			last match of the season for Palace three weeks ago, coming off in
+			the 59th minute - the only minutes heâs missed all
+			season.
+			âWhether or not Monday is too early remains to be seen but Iâll try to give
+			myself every opportunity,â he said. âIt [the groin strain] is
+			coming along really well.â
+			Despite Australiaâs near-impossible group in Brazil, Jedinak admitted
+			heâd even indulged a few visions about the unthinkable since being
+			told he would be the national captain.
+			âYeah, Iâve had dreams about holding the [World] Cup,â he said.
+			âIâd be sitting here lying if I said I hadnât. But itâs so
+			far away now, your focus isnât even game by game, itâs day by day
+			and how weâre going to work towards that goal.â
+			
+			
+			Read more:
+			http://www.smh.com.au/fifa-world-cup-2014/australia-2014/jedinak-to-set-the-tone-for-success-as-socceroos-captain-20140521-zrk5a.html#ixzz32P1KVzx2
+		</fullText>
+		<categoryTag>Sport</categoryTag>
+	</article>
+	<article>
+		<id>11</id>
+		<title>Batman v Superman movie's full name revealed</title>
+		<publishedDate>2014-05-01+10:00</publishedDate>
+		<authorId>1</authorId>
+		<fullText>The highly anticipated Batman versus Superman film has
+			finally been given a title.
+			It will be Batman v Superman: Dawn of Justice.
+			The title is the first solid indication that DC Comics, the comic book
+			franchise owned by Warner Bros, is mounting a fight back against the
+			cinema dominance of its longtime rival Marvel.
+			Despite a longer history with individual franchises for Batman and Superman,
+			DC Comics has been eclipsed in the last decade in the movie business
+			by Marvel-owned properties, such as Spiderman, Thor and
+			Iron-Man.
+			Marvel has also successfully built a multi-character franchise in The
+			Avengers, as well as a TV spin-off, Marvel: Agents of
+			S.H.I.E.L.D.
+			At the same time, other DC-owned hero franchises such as Aquaman,
+			Wonder Woman and Green Lantern have foundered in TV and film
+			development hell, or failed as pilots.
+			As well, a planned Justice League movie, which would have starred
+			Australian model Megan Gale as Wonder Woman, never made it into
+			production.
+			The title of the Batman-Superman film - Dawn of Justice - is a nod to
+			the Justice League, DC's iconic gathering of superheros.
+			In comic books and animated TV iterations, the Justice League has
+			included Superman, Batman (and sometimes Robin), Wonder Woman,
+			Aquaman, Green Lantern and The Flash.
+			The upcoming film, a sequel to the Superman solo film Man of Steel, will
+			star Henry Cavill as Superman and Ben Affleck as Batman. Filming is
+			due to take place in Africa and the South Pacific.
+			Fans got an early hint that it would introduce other members of the
+			Justice League with confirmation some time ago that Israel
+			actress/model Gal Gadot would also star in the film as Wonder
+			Woman.
+			The presence of other characters from DC Comics lore - such as Batman's
+			butler Alfred (Jeremy Irons) and Superman's nemesis Lex Luthor (Jesse
+			Eisenberg) - suggest director Zack Snyder plans to heavily mine the
+			comic book histories of the characters.
+			It is expected that Snyder will follow Batman v Superman with a
+			fully-fledged Justice League film.
+			Batman v Superman is due in cinemas globally in May, 2016.
+			
+			
+			Read more:
+			http://www.smh.com.au/entertainment/movies/batman-v-superman-movies-full-name-revealed-20140522-zrkkq.html#ixzz32P1YpqgE
 		</fullText>
 		<categoryTag>Entertainment</categoryTag>
 	</article>
 	<article>
-		<id>2</id>
-		<title>Foo Bar</title>
-		<publishedDate>2014-01-05</publishedDate>
-		<authorId>2</authorId>
-		<fullText>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
-			dignissim ante, vel facilisis urna. Donec sit amet neque blandit,
-			laoreet ipsum sit amet, imperdiet dui. Vivamus suscipit, odio in
-			lacinia adipiscing, ante ante viverra quam, vitae consequat mauris
-			dui semper nulla. Etiam aliquet arcu mauris, id egestas urna
-			sollicitudin vitae. Ut id laoreet augue. Nam congue accumsan nunc, in
-			blandit velit pretium vitae. Donec nulla odio, vulputate at massa
-			vitae, lacinia viverra libero. Sed hendrerit semper iaculis. Mauris
-			sed tortor sem. Nulla pharetra sed sem eu posuere. Praesent
-			pellentesque, est at semper mollis, justo tellus pulvinar augue, in
-			pretium dolor libero at erat. Duis at eleifend sem, vel mattis nulla.
-
-			Nulla id nibh laoreet, ultrices dui quis, luctus lorem. Praesent eget
-			tincidunt lacus. Donec sapien purus, pellentesque sed arcu nec,
-			volutpat imperdiet lorem. Sed consequat ante eget nisl varius, id
-			dignissim ante scelerisque. Mauris pretium, mi non laoreet euismod,
-			tortor lorem fringilla magna, a lacinia lacus arcu at felis.
-			Curabitur sed tempor tortor, eget mollis quam. Sed dignissim odio sed
-			tellus venenatis pretium. Phasellus pharetra ligula eget nibh luctus,
-			vitae blandit nibh consequat.
+		<id>12</id>
+		<title>Game of Thrones recap: Tyrion Lannister struggles to find a
+			champion fighter to save him</title>
+		<publishedDate>2014-05-21+10:00</publishedDate>
+		<authorId>1</authorId>
+		<fullText>Hello, Throners.
+			
+			I see youâve entered my personal Game of Thrones recap room through
+			the unguarded window. Well, then. Iâm going to pour a glass of
+			wine, replace it with a slurpee because Iâm not actually into wine,
+			and then Iâm going to let you do what you do best.
+			
+			Take off your clothes.
+			
+			Oh yes, Throners. Iâm in control here, and Iâm going to be doing a
+			lot of staring at your firm, supple physiques. Whatâs that you say?
+			Inappropriate in a recap? Thatâs probably true. Iâm valuing your
+			worth based solely on your appearance. Iâm treating you like
+			incredibly buff meat. Frankly, itâs offensive. But you know,
+			Throners, Iâm still seeing clothes covering your well-chiselled
+			obliques and gently sloping glutes.
+			
+			Now, thatâs better. Pass me my smelling salts.
+			
+			If you are genuinely upset by sexual harassment in online pop culture
+			blog form, remember my introductions often reflect my theme, which
+			this week is âjokes and liesâ.
+			
+			So you see, Iâm only joking about you needing to remove your clothes
+			to read on. It's up to you how seriously you take that joke...
+			
+			
+			But back on track. There is a housekeeping matter to attend to regarding
+			upcoming recaps as well, so if you do make it to end, please have a
+			look and leave a comment if you can.
+			
+			In the meantime, letâs kick over some snowcastles and get slappy with
+			another Raven On Game of Thrones recap.
+			
+			Reminder: spoilers will be included below, so only read on if youâve seen
+			the episode. Weâre discovering the storyline through the TV series
+			(reading the books after each has finished), so no dropping important
+			future plot points in the comments, or weâll give you what they
+			refer to in the Vale as an âextreme mooningâ).
+			
+			Read more:
+			http://www.smh.com.au/entertainment/tv-and-radio/game-of-thrones-recap-tyrion-lannister-struggles-to-find-a-champion-fighter-to-save-him-20140520-zrhyq.html#ixzz32P1r2Nnb
 		</fullText>
-		<categoryTag>News</categoryTag>
+		<categoryTag>Entertainment</categoryTag>
 	</article>
-	
-</articles>
+	<article>
+		<id>13</id>
+		<title>Google chooses to spend income its own way</title>
+		<publishedDate>2014-05-15+10:00</publishedDate>
+		<authorId>1</authorId>
+		<fullText>Google was keeping a large portion of its cash outside the
+			US so it could use as much as $US30 billion for possible
+			acquisitions, the company said in a letter to regulators.
+			The web search engine owner generates about half its revenue outside
+			the US and avoids paying US taxes by keeping foreign earnings abroad.
+			Google needs the cash for deals as competition increases outside the
+			US, according to a December 20 letter to the US Securities and
+			Exchange Commission, filed this week as part of a correspondence with
+			the agency regarding disclosures.
+			''We continue to expect substantial use of our offshore earnings for
+			acquisitions as our global business has expanded into other product
+			offerings like mobile devices,'' the letter says. ''It is reasonable
+			to forecast that Google needs between $US20-30 billion of foreign
+			earnings to fund potential acquisitions of foreign targets and
+			foreign technology rights from US targets in 2013 and
+			beyond.''
+			Google, while facing criticism for keeping the cash parked overseas, has
+			been stepping up its deal activity, including the $US3.2 billion
+			purchase earlier this year of digital-thermostat maker Nest Labs,
+			based in Palo Alto, California.
+			The company also has made several smaller purchases, benefiting Google's
+			advertising, cloud services and mobile businesses.
+			''In the past few years we have completed significant acquisitions with
+			the individual deal size increasing in more recent years, and this
+			trend is likely to continue in future years,'' Google said in the
+			letter, which was a response to a question from the SEC about its
+			plans for reinvesting foreign earnings.
+			At the end of last year, Google held $US33.6 billion of its $US58.7
+			billion of cash, cash equivalents and marketable securities in its
+			foreign subsidiaries.
+			''If these funds are needed for our operations in the US, we would be
+			required to accrue and pay US taxes to repatriate these funds,'' the
+			company said in a filing in February. ''However, our intent is to
+			permanently reinvest these funds outside of the US and our current
+			plans do not demonstrate a need to repatriate them to fund our US
+			operations.''
+			The company also sees other uses for earnings made outside the US, such
+			as $US2-4 billion for capital expenditures. That includes data
+			centres and other operations. The company also needs $US12-14 billion
+			for a research-and-development cost-sharing agreement.
+			The filing was part of an exchange between the SEC and Google that began
+			last year related to questions about disclosures in the company's
+			2012 annual report.
+			
+			
+			Read more:
+			http://www.smh.com.au/business/google-chooses-to-spend-income-its-own-way-20140521-38p0t.html#ixzz32P2FkjVu
+		</fullText>
+		<categoryTag>Business</categoryTag>
+	</article>
+	<article>
+		<id>14</id>
+		<title>Aussie bank brands trump Twitter and eBay</title>
+		<publishedDate>2014-05-22+10:00</publishedDate>
+		<authorId>1</authorId>
+		<fullText>The brands of two of Australia's big banks are more valuable
+			than those of oil giant Shell or household tech names Twitter, eBay
+			and Linkedin, according to a global market research agency.
+			Commonwealth Bank and ANZ made Millward Brown's Top 100 Brandz report
+			for 2014, ranked 44 and 51 respectively.
+			The pair, two of four Australian companies on the list, also beat
+			international brands Gillette (52), FedEx (58), Swedish fashion
+			retailer H&amp;M (63) and Gucci (60).
+			Senior business consultant at Millward Brown Australia Johnny Panagiotidis
+			said Commonwealth Bank had moved up four places on 2013, with an 18
+			per cent rise in brand value to $US21 billion ($22.76 billion) this
+			year.
+			Westpac also made the list with an impressive 17 per cent rise in brand
+			value to $US12 billion, which pushed it up three places to No.
+			85.
+			''The impressive growth in brand value of the two Australian brands in
+			this year's Top 100 is in line with the strong recovery in valuations
+			seen across the globe," Mr Panagiotidis said.
+			ANZ's ranking was unchanged, despite its brand value jumping 15 per cent
+			to $US19 billion.
+			Overall, the brand value of companies has bounced back strongly since the
+			financial crisis, Mr Panagiotidis said.
+			The combined value of the top 100 has nearly doubled since the first
+			ranking was produced in 2006 to $US2.9 trillion.
+			This is an increase of 49 per cent compared with the 2008 valuation,
+			which marked the start of the banking and currency crisis.
+			''The global financial crisis was a challenging time for many
+			companies but despite fluctuating macro-economic conditions and the
+			impact of digital disruption, we still see seventy-one of the brands
+			listed in our 2014 Top 100 that were there in 2008,'' Mr Panagiotidis
+			said.
+			''Strong brands are better able to weather the storm and, when valued by
+			companies, create value for them."
+			Dominant supermarket group Woolworths was also on the list, after falling two
+			places to No.82.
+			US search engine Google topple rival technology behemoth Apple, which
+			spent the past three year's as the world's most valuable
+			brand.
+			Google's brand value shot up 40 per cent in a year to $US158.84 billion,
+			Millward Brown said, thanks to its internet-linked eyewear Google
+			Glass.
+			The company has joined hands with Luxottica, which owns Ray-Ban and
+			other high-end brands, to sell the new product in the United
+			States.
+			"Google has been hugely innovative in the last year with Google Glass,
+			investments in artificial intelligence and a multitude of
+			partnerships that see its Android operating system becoming embedded
+			in other goods such as cars,'' said Nick Cooper, Managing Director of
+			Millward Brown Optimor.
+			''All of this activity sends a very strong signal to consumers about what
+			Google is about and it has coincided with a slowdown at
+			Apple."
+			Technology companies continued to dominate the list, with IBM and Microsoft
+			rounding out the top four.
+			Millward Brown said the sector, which accounted for 29 per cent of the list,
+			also included many of the list's fastest climbers. Leading Chinese
+			internet brand Tencent scored the biggest increase, leaping 97 per
+			cent to $US54 billion ($A58.53 billion), catapulting it to No.
+			14.
+			This was followed by Facebook, which rose 68 per cent to $US36 billion to
+			take No. 21 spot.
+			
+			
+			Read more:
+			http://www.smh.com.au/business/media-and-marketing/aussie-bank-brands-trump-twitter-and-ebay-20140521-38noq.html#ixzz32P2OMAO2
+		</fullText>
+		<categoryTag>Business</categoryTag>
+	</article>
+	<article>
+		<id>15</id>
+		<title>Apple sued over vanishing text messages after iPhones swapped
+			for Androids</title>
+		<publishedDate>2014-05-20+10:00</publishedDate>
+		<authorId>2</authorId>
+		<fullText>A former iPhone user is suing Apple, claiming the company's
+			messaging system interfered with delivery of texts after she switched
+			to an Android smartphone.
+			
+			Apple's iMessage retains text messages sent from other users of Apple
+			devices and won't deliver them to her Samsung phone running on
+			Google's Android operating system, Adrienne Moore said in the
+			complaint filed last week in San Jose, California.
+			
+			People who replace their Apple devices with non-Apple smartphones and
+			tablets are "penalised and unable to obtain the full benefits of
+			their wireless-service contracts", according to the
+			complaint.
+			
+			Apple has battled smartphone manufacturers in court, most recently in a
+			patent lawsuit against Samsung in San Jose. Apple accused Samsung of
+			infringement based in large part on its use of Android-based
+			features.
+			
+			Advertisement
+			Google, meanwhile, is pushing for a bigger piece of the smartphone market
+			with new features and updates to attract more users. The efforts
+			helped the search-engine company claim more than 75 per cent of the
+			smartphone industry at the end of last year, according to
+			Gartner.
+			
+			Apple and Google last week declared a cease-fire in their
+			intellectual-property wars, saying they will work together in some
+			areas of patent reform.
+			
+			The text-messaging lawsuit, which seeks class-action status and
+			undetermined damages, claims Apple failed to disclose that switching
+			to a device other than one running on Apple's iOS operating system
+			would result in the interference. The suit is based on contractual
+			interference and unfair competition laws.
+			
+			Apple spokeswoman Kristin Huguet declined to comment on the
+			lawsuit.
+			
+			Read more:
+			http://www.smh.com.au/digital-life/mobiles/apple-sued-over-vanishing-text-messages-after-iphones-swapped-for-androids-20140520-zri7i.html
+		</fullText>
+		<categoryTag>Technology</categoryTag>
+	</article>
+	<article>
+		<id>16</id>
+		<title>Mario Golf World Tour game review</title>
+		<publishedDate>2014-05-22+10:00</publishedDate>
+		<authorId>2</authorId>
+		<fullText>Mario has repeatedly proven himself as the world's most
+			versatile athlete, but it's been a decade since the tubby plumber
+			last hit the links. Fortunately, he still knows how to play a great
+			game.
+			
+			World Tour lets you play three traditional golf courses as your customised
+			Mii character, trying to lower your handicap and win the trio of
+			"Castle Club" tournaments. It's a good training ground to learn how
+			to hit the ball consistently, add spin and account for the breeze,
+			but the conservative holes soon become dull and the campaign can be
+			polished off in just a few hours.
+			
+			It's the six wacky nine-hole Mario World courses that make the game
+			special and will keep you coming back. There's a course set at
+			Bowser's Castle that includes exploding bombs and even an underwater
+			setting. 
+			
+			Advertisement
+			You can belt your ball into pipes and dash pads to gain extra metres,
+			and hit Mario Kart's famous item boxes to earn single-use power-ups.
+			Special shots include the Bullet Bill, which fires deadly straight
+			regardless of the wind, and the Fire Flower, which can burn a pathway
+			through trees.
+			
+			Controls are simple to learn but you always have tricky decisions to make,
+			with big rewards for pulling off risky shots but disastrous
+			consequences for mistimed misadventures.
+			
+			New courses, characters and costumes are unlocked via the puzzle-like
+			challenges, which set you fun tasks such as hitting the ball through
+			deviously placed rings, collecting scattered coins, duels against
+			other champs or races against the clock.
+			
+			There are official online tournaments or you can host your own and choose
+			custom rules.
+			
+			Players can also buy six more downloadable 18-hole courses which come with
+			bonus characters, but the price might grate considering the anaemic
+			Castle Club campaign.
+			
+			Fortunately, even if you don't spend more cash you will still find World Tour
+			challenging and rewarding. 
+			
+			Read more:
+			http://www.smh.com.au/digital-life/games/mario-golf-world-tour-game-review-20140517-zrbdn.html
+		</fullText>
+		<categoryTag>Technology</categoryTag>
+	</article>
+</ns2:articles>
