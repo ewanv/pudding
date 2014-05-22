@@ -12,7 +12,8 @@
 	</xsl:template>
 	<xsl:template match="article">
 
-		<div class="col-sm-3">
+		<!-- <div class="col-sm-3"> -->
+		<div>
 			<div class="thumbnail">
 				<div class="caption">
 					<h3>
