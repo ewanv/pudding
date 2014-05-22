@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="articles.xsl"?>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.sun.xml.ws.util.StringUtils"%>
 <%@ page import="uts.wsd.*" %>
 <%@page contentType="application/xml"%>
@@ -23,8 +24,8 @@
 			<% Author author = authors.findAuthor(article.getAuthorId());  %>
 			<article id="<%= article.getId() %>">
 				<title><%= article.getTitle() %></title>
-				<publishedDate><%= article.getPublishedDate() %></publishedDate>
-				<shortText><%= article.getFullText().substring(0, Math.min(article.getFullText().length(), 40)) %></shortText>
+				<publishedDate><%= new SimpleDateFormat("EEEEE, d MMMMM yyyy").format(article.getPublishedDate()) %></publishedDate>
+				<shortText><%= article.getFullText().substring(0, Math.min(article.getFullText().length(), 80)) + "..." %></shortText>
 				<author>
 					<name><%= author.getName() %></name>
 					<id><%= article.getAuthorId() %></id>
