@@ -25,6 +25,7 @@
 										<xs:element name="authorId" type="xs:long" />
 										<xs:element name="fullText" type="xs:string" />
 										<xs:element name="categoryTag" type="xs:string" />
+										<xs:element name="authorOnly" type="xs:boolean" />
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>

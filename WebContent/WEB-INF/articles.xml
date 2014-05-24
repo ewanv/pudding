@@ -82,6 +82,7 @@
 			http://www.smh.com.au/nsw/call-to-halt-white-elephant-bridge-across-anzac-parade-20140521-38p40.html#ixzz32P0HMc7Y
 		</fullText>
 		<categoryTag>News</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>9</id>
@@ -140,6 +141,7 @@
 			http://www.smh.com.au/sport/cycling/michael-rogers-wins-stage-cadel-evans-still-leads-giro-ditalia-20140522-zrkjf.html#ixzz32P0qWUBN
 		</fullText>
 		<categoryTag>Sport</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>10</id>
@@ -221,6 +223,7 @@
 			http://www.smh.com.au/fifa-world-cup-2014/australia-2014/jedinak-to-set-the-tone-for-success-as-socceroos-captain-20140521-zrk5a.html#ixzz32P1KVzx2
 		</fullText>
 		<categoryTag>Sport</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>11</id>
@@ -271,6 +274,7 @@
 			http://www.smh.com.au/entertainment/movies/batman-v-superman-movies-full-name-revealed-20140522-zrkkq.html#ixzz32P1YpqgE
 		</fullText>
 		<categoryTag>Entertainment</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>12</id>
@@ -322,6 +326,7 @@
 			http://www.smh.com.au/entertainment/tv-and-radio/game-of-thrones-recap-tyrion-lannister-struggles-to-find-a-champion-fighter-to-save-him-20140520-zrhyq.html#ixzz32P1r2Nnb
 		</fullText>
 		<categoryTag>Entertainment</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>13</id>
@@ -377,6 +382,7 @@
 			http://www.smh.com.au/business/google-chooses-to-spend-income-its-own-way-20140521-38p0t.html#ixzz32P2FkjVu
 		</fullText>
 		<categoryTag>Business</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>14</id>
@@ -450,6 +456,7 @@
 			http://www.smh.com.au/business/media-and-marketing/aussie-bank-brands-trump-twitter-and-ebay-20140521-38noq.html#ixzz32P2OMAO2
 		</fullText>
 		<categoryTag>Business</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>15</id>
@@ -500,6 +507,7 @@
 			http://www.smh.com.au/digital-life/mobiles/apple-sued-over-vanishing-text-messages-after-iphones-swapped-for-androids-20140520-zri7i.html
 		</fullText>
 		<categoryTag>Technology</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>16</id>
@@ -553,5 +561,6 @@
 			http://www.smh.com.au/digital-life/games/mario-golf-world-tour-game-review-20140517-zrbdn.html
 		</fullText>
 		<categoryTag>Technology</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 </ns2:articles>

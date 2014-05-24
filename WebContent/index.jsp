@@ -21,17 +21,20 @@
 	<% } %>
 	<articles>
 		<% for(Article article: articles.getArticles()) { %>
-			<% Author author = authors.findAuthor(article.getAuthorId());  %>
-			<article id="<%= article.getId() %>">
-				<title><%= article.getTitle() %></title>
-				<publishedDate><%= new SimpleDateFormat("EEEEE, d MMMMM yyyy").format(article.getPublishedDate()) %></publishedDate>
-				<shortText><%= article.getFullText().substring(0, Math.min(article.getFullText().length(), 80)) + "..." %></shortText>
-				<author>
-					<name><%= author.getName() %></name>
-					<id><%= article.getAuthorId() %></id>
-				</author>
-				<categoryTag><%= article.getCategoryTag() %></categoryTag>
-			</article>
+			<% if(!article.isAuthorOnly() || loggedInAuthor != null) { %>
+				<% Author author = authors.findAuthor(article.getAuthorId());  %>
+				<article id="<%= article.getId() %>">
+					<title><%= article.getTitle() %></title>
+					<publishedDate><%= new SimpleDateFormat("EEEEE, d MMMMM yyyy").format(article.getPublishedDate()) %></publishedDate>
+					<!-- Grabs the first 40 characters of the article's full text to use as a short snippet -->
+					<shortText><%= article.getFullText().substring(0, Math.min(article.getFullText().length(), 80)) + "..." %></shortText>
+					<author>
+						<name><%= author.getName() %></name>
+						<id><%= article.getAuthorId() %></id>
+					</author>
+					<categoryTag><%= article.getCategoryTag() %></categoryTag>
+				</article>
+			<% } %>
 		<% } %>
 	</articles>
 </page>

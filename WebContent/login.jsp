@@ -18,13 +18,15 @@
 		password = request.getParameter("password");
 		Author author = authors.login(username, password);
 		if(author != null) {
+			// User sucessfully logged in
 			session.setAttribute("author", author);
 			response.sendRedirect("index.jsp");
 		} else {
-			if(username == null || username.equals("")){
+			// Determine up the error to display
+			if(username == null || username.equals("")) {
 				errors.put("username","Username can't be blank");
 			}
-			if(password == null || password.equals("")){
+			if(password == null || password.equals("")) {
 				errors.put("password","Password can't be blank");
 			}
 			if(errors.size() == 0) { //If password and username are present

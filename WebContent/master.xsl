@@ -9,10 +9,6 @@
 				<title>
 					<xsl:value-of select="@title" />
 				</title>
-				<style>
-					table { border: solid 1px black; border-collapse:collapse; }
-					table td { border: solid 1px #999; }
-				</style>
 			</head>
 			<body>
 				<xsl:call-template name="nav"/>
@@ -24,20 +20,22 @@
 	</xsl:template>
 
 	<xsl:template name="content">
+		<!-- Only displayed if an XSL stylesheet which imports master is missing a content template.
+		Serves to remind developers if they forget. -->
 		<span style="color: red">Content template is empty - overrule in page
 			template.</span>
 	</xsl:template>
 
+	<!-- Standard bootstrap navigation markup. It's possible to add more to allow for
+	a responsive navigation bar, but that's unnecessary for this application -->
 	<xsl:template name="nav">
 		<nav class="navbar navbar-default" role="navigation">
 			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
 
 					<a class="navbar-brand" href="index.jsp">NewsApplication</a>
 				</div>
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
 				<ul class="nav navbar-nav">
 					<li>
 						<a href="index.jsp">Articles</a>

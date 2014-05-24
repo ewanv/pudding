@@ -26,17 +26,20 @@
 	</xsl:template>
 	<xsl:template match="textField">
 		<xsl:variable name="class">
+			<!-- Tests if an error exists with the same name attribute as this node's -->
 			<xsl:if test="boolean(//error/@name=@name)" >
+				<!-- Used by bootstrap to display a form field with an error. -->
 				<xsl:text>has-error</xsl:text>
 			</xsl:if>
 		</xsl:variable>
 		<div class="form-group {$class}">
 			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
 			<div class="col-sm-3">
-				<input type="text" name="{@name}" value="{@value}" class="form-control"/>
+				<input type="text" name="{@name}" value="{@value}" class="form-control" required="true"/>
 			</div>
 			<xsl:if test="boolean(//error/@name=@name)" >
 				<span class="help-block">
+					<!-- Displays error text for this form field -->
 					<xsl:value-of select="//error[@name=current()/@name]"/>
 				</span>
 			</xsl:if>
@@ -44,7 +47,9 @@
 	</xsl:template>
 	<xsl:template match="textArea">
 		<xsl:variable name="class">
+			<!-- Tests if an error exists with the same name attribute as this node's -->
 			<xsl:if test="boolean(//error/@name=@name)" >
+				<!-- Used by bootstrap to display a form field with an error. -->
 				<xsl:text>has-error</xsl:text>
 			</xsl:if>
 		</xsl:variable>
@@ -57,6 +62,7 @@
 			</div>
 			<xsl:if test="boolean(//error/@name=@name)" >
 				<span class="help-block">
+					<!-- Displays error text for this form field -->
 					<xsl:value-of select="//error[@name=current()/@name]"/>
 				</span>
 			</xsl:if>
@@ -64,6 +70,7 @@
 	</xsl:template>
 	<xsl:template match="selectField">
 		<xsl:variable name="class">
+			<!-- Used by bootstrap to display a form field with an error. -->
 			<xsl:if test="boolean(//error/@name=@name)" >
 				<xsl:text>has-error</xsl:text>
 			</xsl:if>
@@ -77,6 +84,7 @@
 			</div>
 			<xsl:if test="boolean(//error/@name=@name)" >
 				<span class="help-block">
+					<!-- Displays error text for this form field -->
 					<xsl:value-of select="//error[@name=current()/@name]" />
 				</span>
 			</xsl:if>
@@ -117,17 +125,20 @@
 	</xsl:template>
 	<xsl:template match="passwordField">
 		<xsl:variable name="class">
+			<!-- Tests if an error exists with the same name attribute as this node's -->
 			<xsl:if test="boolean(//error/@name=@name)" >
+				<!-- Used by bootstrap to display a form field with an error. -->
 				<xsl:text>has-error</xsl:text>
 			</xsl:if>
 		</xsl:variable>
 		<div class="form-group {$class}">
 			<label class="control-label col-sm-1" for="{@name}"><xsl:value-of select="@title"/></label>
 			<div class="col-sm-3">
-				<input type="password" name="{@name}" value="{@value}" class="form-control"/>
+				<input type="password" name="{@name}" value="{@value}" class="form-control" required="true"/>
 			</div>
 			<xsl:if test="boolean(//error/@name=@name)" >
 				<span class="help-block">
+					<!-- Displays error text for this form field -->
 					<xsl:value-of select="//error[@name=current()/@name]"/>
 				</span>
 			</xsl:if>

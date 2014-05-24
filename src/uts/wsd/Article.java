@@ -16,7 +16,7 @@ public class Article implements Serializable {
 		
 	}
 	
-	public Article(long id, String title, String publishedDate, long authorId, String fullText, String categoryTag) throws ParseException
+	public Article(long id, String title, String publishedDate, long authorId, String fullText, String categoryTag, boolean authorOnly) throws ParseException
 	{
 		this.id = id;
 		this.title = title;
@@ -25,6 +25,7 @@ public class Article implements Serializable {
 		this.authorId = authorId;
 		this.fullText = fullText;
 		this.categoryTag = categoryTag;
+		this.setAuthorOnly(authorOnly);
 	}
 	
 	//============Properties=====================================
@@ -42,6 +43,8 @@ public class Article implements Serializable {
 	private String fullText;
 	
 	private String categoryTag;
+	
+	private boolean authorOnly;
 	
 	
 	//=========Getters and Setters================================
@@ -90,6 +93,14 @@ public class Article implements Serializable {
 		this.categoryTag = categoryTag;
 	}
 	
+	public boolean isAuthorOnly() {
+		return authorOnly;
+	}
+
+	public void setAuthorOnly(boolean authorOnly) {
+		this.authorOnly = authorOnly;
+	}
+
 	//==========Other methods================================
 	
 	public String toString()

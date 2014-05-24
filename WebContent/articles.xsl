@@ -6,13 +6,15 @@
 		<xsl:apply-templates />
 	</xsl:template>
 	<xsl:template match="articles">
+		<!-- Used by bootstrap to properly format rows of information.
+		It's not necessary for everything within a row to actually fit on one row. -->
 		<div class="row">
 			<xsl:apply-templates />
 		</div>
 	</xsl:template>
+	<!-- Displays article information in a bootstrap thumbnail -->
 	<xsl:template match="article">
 
-		<!-- <div class="col-sm-3"> -->
 		<div>
 			<div class="thumbnail">
 				<div class="caption">

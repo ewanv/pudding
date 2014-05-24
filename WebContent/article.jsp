@@ -17,6 +17,7 @@
 	Article article = articles.findArticle(id);
 	Author loggedInAuthor = (Author)session.getAttribute("author");
 	if(article == null) {
+		// Render a 404 page
 		response.sendError(HttpServletResponse.SC_NOT_FOUND, "Article not found");
 	}
 %>
@@ -25,16 +26,18 @@
 		<% if(loggedInAuthor != null) { %>
 			<loggedInAuthor id="<%= loggedInAuthor.getId() %>"/>
 		<% } %>
-		<% Author author = authors.findAuthor(article.getAuthorId());  %>
-		<article id="<%= article.getId() %>" deleteable="<%= loggedInAuthor != null && loggedInAuthor.getId() == article.getAuthorId() %>">
-			<title><%= article.getTitle() %></title>
-			<publishedDate><%= new SimpleDateFormat("EEEEE, d MMMMM yyyy").format(article.getPublishedDate()) %></publishedDate>
-			<text><%= article.getFullText() %></text>
-			<author>
-				<name><%= author.getName() %></name>
-				<id><%= article.getAuthorId() %></id>
-			</author>
-			<categoryTag><%= article.getCategoryTag() %></categoryTag>
-		</article>
+		<% if(!article.isAuthorOnly() || loggedInAuthor != null) { %>
+			<% Author author = authors.findAuthor(article.getAuthorId());  %>
+			<article id="<%= article.getId() %>" deleteable="<%= loggedInAuthor != null && loggedInAuthor.getId() == article.getAuthorId() %>">
+				<title><%= article.getTitle() %></title>
+				<publishedDate><%= new SimpleDateFormat("EEEEE, d MMMMM yyyy").format(article.getPublishedDate()) %></publishedDate>
+				<text><%= article.getFullText() %></text>
+				<author>
+					<name><%= author.getName() %></name>
+					<id><%= article.getAuthorId() %></id>
+				</author>
+				<categoryTag><%= article.getCategoryTag() %></categoryTag>
+			</article>
+		<% } %>
 	</page>
 <% } %>

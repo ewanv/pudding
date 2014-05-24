@@ -19,18 +19,13 @@
 
 	Articles articles = newsApp.getArticles();
 	HashMap<String,String> errors = new HashMap<String,String>();
-	String title = "";
-	String fullText = "";
-	String categoryTag = "";
-	String generateText = "";
+	String categoryTag = article.getCategoryTag() != null ? article.getCategoryTag() : "";
+	String generateText = request.getParameter("generateText");
 	if(request.getMethod().equalsIgnoreCase("post") && loggedInAuthor != null) {
-		title = request.getParameter("title");
-		fullText = request.getParameter("fullText");
-		categoryTag = request.getParameter("categoryTag");
-		generateText = request.getParameter("generateText");
 		if (generateText != null && generateText.equals("true")) {
 			LoremIpsum4J lipsumGenerator = new LoremIpsum4J();
 			String[] paragraphs = lipsumGenerator.getParagraphs(5);
+			String fullText = "";
 			for (int i = 0; i < paragraphs.length; i++) {
 				fullText = paragraphs[i];
 			}
@@ -57,8 +52,8 @@
 		</errors>
 	<% } %>
 	<form method="post" action="postArticle.jsp">
-		<textField title="Title" name="title" value="<%= title %>"/>
-		<textArea title="Full Text" name="fullText" value="<%= fullText %>"/>
+		<textField title="Title" name="title" value="<%= article.getTitle() != null ? article.getTitle() : "" %>"/>
+		<textArea title="Full Text" name="fullText" value="<%= article.getFullText() != null ? article.getFullText() : "" %>"/>
 		<checkbox title="Generate article text" name="generateText" checked="<%= generateText %>"/>
 		<selectField title="Category" name="categoryTag" value="<%= categoryTag %>">
 			<selectOption value="News" selected="<%= categoryTag.equals("News") %>">News</selectOption>
@@ -68,6 +63,7 @@
 			<selectOption value="Finance" selected="<%= categoryTag.equals("Finance") %>">Finance</selectOption>
 			<selectOption value="Technology" selected="<%= categoryTag.equals("Technology") %>">Technology</selectOption>
 		</selectField>
+		<checkbox title="Only visible to authors" name="authorOnly" checked="<%= article.isAuthorOnly() %>"/>
 		<hiddenField name="authorId" value="<%= loggedInAuthor.getId() %>"/>
 		<submitButton title="Post Article"/>
 	</form>
