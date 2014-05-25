@@ -22,12 +22,18 @@
 	<articles>
 		<% for(Article article: articles.getArticles()) { %>
 			<% if(!article.isAuthorOnly() || loggedInAuthor != null) { %>
+				<%
+					// Grabs the first 200 characters of the article's full text
+					String shortText = article.getFullText().substring(0, Math.min(article.getFullText().length(), 200));
+					// Append ellipses if the text was truncated
+					if(article.getFullText().length() > 200)
+						shortText += "...";
+				%> 
 				<% Author author = authors.findAuthor(article.getAuthorId());  %>
 				<article id="<%= article.getId() %>">
 					<title><%= article.getTitle() %></title>
 					<publishedDate><%= new SimpleDateFormat("EEEEE, d MMMMM yyyy").format(article.getPublishedDate()) %></publishedDate>
-					<!-- Grabs the first 40 characters of the article's full text to use as a short snippet -->
-					<shortText><%= article.getFullText().substring(0, Math.min(article.getFullText().length(), 80)) + "..." %></shortText>
+					<shortText><%= shortText %></shortText>
 					<author>
 						<name><%= author.getName() %></name>
 						<id><%= article.getAuthorId() %></id>
