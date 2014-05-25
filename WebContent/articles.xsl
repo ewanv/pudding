@@ -6,9 +6,7 @@
 		<xsl:apply-templates />
 	</xsl:template>
 	<xsl:template match="articles">
-		<!-- Used by bootstrap to properly format rows of information.
-		It's not necessary for everything within a row to actually fit on one row. -->
-		<div class="row">
+		<div class="col-sm-6">
 			<xsl:apply-templates />
 		</div>
 	</xsl:template>
