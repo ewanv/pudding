@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -52,15 +53,20 @@ public class Authors implements Serializable {
 		return null;
 	}
 	
+	private long highestId() {
+		long highestId = 0;
+		for(Author author: authors) {
+			if(author.getId() > highestId) {
+				highestId = author.getId();
+			}
+		}
+		return highestId;
+	}
+	
 	public void addAuthor(Author author) throws JAXBException, FileNotFoundException
 	{
+		author.setId(highestId() + 1);
 		authors.add(author);
-		/*
-		JAXBContext jc = JAXBContext.newInstance(Authors.class);
-		Marshaller m = jc.createMarshaller();
-		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-		m.marshal(author, new FileOutputStream("authors.xml"));
-		*/
 	}
 	
 	public void removeAuthor(Author author)

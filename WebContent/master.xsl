@@ -55,6 +55,9 @@
 							<li>
 								<a href="login.jsp">Login</a>
 							</li>
+							<li>
+								<a href="signUp.jsp">Sign Up</a>
+							</li>
 						</xsl:otherwise>
 					</xsl:choose>
 				</ul>

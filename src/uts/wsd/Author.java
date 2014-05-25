@@ -2,6 +2,7 @@ package uts.wsd;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashMap;
 
 import javax.xml.bind.annotation.*;
 
@@ -60,5 +61,46 @@ public class Author implements Serializable {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	// Other methods
+
+	public boolean isValid() {
+		if(name == null || name.equals("")) {
+			return false;
+		}
+		if(bio == null || bio.equals("")) {
+			return false;
+		}
+		if(dateOfBirth == null) {
+			return false;
+		}
+		if(username == null || username.equals("")) {
+			return false;
+		}
+		if(password== null || password.equals("")) {
+			return false;
+		}
+		return true;
+	}
+	
+	public HashMap<String,String> errors() {
+		HashMap<String,String> errors = new HashMap<String, String>();
+		if(name == null || name.equals("")) {
+			errors.put("name","Name cannot be blank.");
+		}
+		if(bio == null || bio.equals("")) {
+			errors.put("bio","Biography cannot be blank.");
+		}
+		if(dateOfBirth== null) {
+			errors.put("dateOfBirth","Date of Birth cannot be blank.");
+		}
+		if(username== null || username.equals("")) {
+			errors.put("username","Username cannot be blank.");
+		}
+		if(password == null) {
+			errors.put("password","Password cannot be blank.");
+		}
+		return errors;
 	}
 }
