@@ -31,7 +31,7 @@
 	<% } %>
 	<author id="<%= author.getId() %>">
 		<name><%= author.getName() %></name>
-		<dateOfBirth><%= author.getDateOfBirth() %></dateOfBirth>
+		<dateOfBirth><%= new SimpleDateFormat("d MMMMM yyyy").format(author.getDateOfBirth()) %></dateOfBirth>
 		<bio><%= author.getBio() %></bio>
 		<articles>
 			<% for(Article article: articleList) { %>
