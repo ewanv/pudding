@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ns2:articles xmlns:ns2="http://www.uts.edu.au/31284/wsd-diary">
+<articles xmlns="http://www.uts.edu.au/31284/wsd-diary"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-diary articles.xsd">
 
 <!-- Article data including id, title, published date, author ID, full text and category tag -->
 
@@ -26,6 +28,7 @@
 			http://www.smh.com.au/nsw/hazy-morning-for-sydney-as-smoke-hangs-over-city-20140522-zrkje.html#ixzz32OzsnvPE
 		</fullText>
 		<categoryTag>News</categoryTag>
+		<authorOnly>false</authorOnly>
 	</article>
 	<article>
 		<id>8</id>
@@ -566,4 +569,4 @@
 		<categoryTag>Technology</categoryTag>
 		<authorOnly>false</authorOnly>
 	</article>
-</ns2:articles>
+</articles>
