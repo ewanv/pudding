@@ -6,6 +6,12 @@ import java.util.HashMap;
 
 import javax.xml.bind.annotation.*;
 
+/**
+ * 
+ * Java bean for authors.
+ * Used for data transfer.
+ */
+
 @XmlRootElement(name="author")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Author implements Serializable {
@@ -63,7 +69,7 @@ public class Author implements Serializable {
 		this.password = password;
 	}
 	
-	// Other methods
+	//=========Other methods============
 
 	public boolean isValid() {
 		if(name == null || name.equals("")) {
@@ -84,6 +90,7 @@ public class Author implements Serializable {
 		return true;
 	}
 	
+	//Error messages
 	public HashMap<String,String> errors() {
 		HashMap<String,String> errors = new HashMap<String, String>();
 		if(name == null || name.equals("")) {

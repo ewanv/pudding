@@ -8,6 +8,13 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+/**
+ * 
+ * Java bean for collection of Articles. 
+ * Handles the adding, removal and searching of articles.
+ *
+ */
+
 @XmlRootElement(name="articles", namespace="http://www.uts.edu.au/31284/wsd-diary")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Articles implements Serializable {
@@ -68,14 +75,5 @@ public class Articles implements Serializable {
 	{
 		articles.remove(article);
 	}
-	
-	public void printArticles()
-	{
-		for (Article a : articles)
-		{
-			System.out.println(a);
-		}
-	}
-	
 	
 }

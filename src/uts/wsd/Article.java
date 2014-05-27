@@ -4,8 +4,15 @@ import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
 import javax.xml.bind.annotation.*;
+
+/**
+ * *
+ * Java bean for articles.
+ * Used for data transfer.
+ *
+ */
+
 
 @XmlRootElement(name="article")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -121,6 +128,8 @@ public class Article implements Serializable {
 		return true;
 	}
 	
+	
+	//Error messages
 	public HashMap<String,String> errors() {
 		HashMap<String,String> errors = new HashMap<String, String>();
 		if(title == null || title.equals("")) {

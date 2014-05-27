@@ -11,6 +11,12 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.annotation.*;
 
+/**
+ * 
+ * Java bean for a collection of authors.
+ * Handles the adding, removal and searching of authors.
+ */
+
 @XmlRootElement(name="authors", namespace="http://www.uts.edu.au/31284/wsd-diary")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Authors implements Serializable {

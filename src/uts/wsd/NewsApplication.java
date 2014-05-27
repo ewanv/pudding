@@ -36,15 +36,8 @@ public class NewsApplication {
 		fin.close();
 	}
 
-	/*
-	 * For copy/pasting purposes id, title, publishedDate, authorId, fullText,
-	 * categoryTag long id, String title, String publishedDate, long authorId,
-	 * String fullText, String categoryTag
-	 */
-
 	public Articles getArticles() {
-		return articles;
-		
+		return articles;	
 	}
 
 	public void setArticles(Articles articles) throws JAXBException, FileNotFoundException {
@@ -52,7 +45,7 @@ public class NewsApplication {
 		//Marshalling
 		JAXBContext jc = JAXBContext.newInstance(Articles.class);
 		Marshaller m = jc.createMarshaller();
-		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true); 
 		m.marshal(articles, new FileOutputStream(articlePath));
 	}
 
