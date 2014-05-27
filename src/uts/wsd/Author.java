@@ -10,8 +10,8 @@ import javax.xml.bind.annotation.*;
  * 
  * Java bean for authors.
  * Used for data transfer.
+ * @author Chris Nguyen
  */
-
 @XmlRootElement(name="author")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Author implements Serializable {
@@ -71,6 +71,9 @@ public class Author implements Serializable {
 	
 	//=========Other methods============
 
+	/**
+	 * Validate this Author to ensure it contains all required elements
+	 */
 	public boolean isValid() {
 		if(name == null || name.equals("")) {
 			return false;
@@ -90,7 +93,10 @@ public class Author implements Serializable {
 		return true;
 	}
 	
-	//Error messages
+	/**
+	 * Error messages for an Author
+	 * @return
+	 */
 	public HashMap<String,String> errors() {
 		HashMap<String,String> errors = new HashMap<String, String>();
 		if(name == null || name.equals("")) {

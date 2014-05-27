@@ -10,12 +10,24 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+/**
+ * News Application object which provides access to the Authors and Articles in the application
+ * @author Chris Nguyen
+ *
+ */
 public class NewsApplication {
 	private Articles articles;
 	private Authors authors;
 	private String articlePath;
 	private String authorPath;
 	
+	/**
+	 * Set the filepath to the Articles XML file
+	 * Will also unmarshall the Articles XML file 
+	 * @param path
+	 * @throws JAXBException
+	 * @throws IOException
+	 */
 	public void setArticlesFilePath(String path) throws JAXBException, IOException {
 		this.articlePath = path;
 		//Unmarshalling
@@ -26,6 +38,13 @@ public class NewsApplication {
 		fin.close();
 	}
 	
+	/**
+	 * Set the filepath to the Authors XML file
+	 * Will also unmarshall the Authors XML file
+	 * @param path
+	 * @throws JAXBException
+	 * @throws IOException
+	 */
 	public void setAuthorsFilePath(String path) throws JAXBException, IOException {
 		this.authorPath = path;
 		//Unmarshalling
@@ -36,10 +55,21 @@ public class NewsApplication {
 		fin.close();
 	}
 
+	/**
+	 * Get the Articles object
+	 * @return
+	 */
 	public Articles getArticles() {
 		return articles;	
 	}
 
+	/**
+	 * Set the Articles object
+	 * Will also marshall the new Articles object into XML
+	 * @param articles
+	 * @throws JAXBException
+	 * @throws FileNotFoundException
+	 */
 	public void setArticles(Articles articles) throws JAXBException, FileNotFoundException {
 		this.articles = articles;
 		//Marshalling
@@ -49,10 +79,21 @@ public class NewsApplication {
 		m.marshal(articles, new FileOutputStream(articlePath));
 	}
 
+	/**
+	 * Get the Authors object
+	 * @return
+	 */
 	public Authors getAuthors() {
 		return authors;
 	}
 
+	/**
+	 * Set the Authors object
+	 * Will also marshall the new Authors object into XML
+	 * @param authors
+	 * @throws JAXBException
+	 * @throws FileNotFoundException
+	 */
 	public void setAuthors(Authors authors) throws JAXBException, FileNotFoundException {
 		this.authors = authors;
 		//Marshalling

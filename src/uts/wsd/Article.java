@@ -7,22 +7,35 @@ import java.util.*;
 import javax.xml.bind.annotation.*;
 
 /**
- * *
+ *
  * Java bean for articles.
  * Used for data transfer.
+ * @author Chris Nguyen
  *
  */
-
-
 @XmlRootElement(name="article")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Article implements Serializable {
 	
+	/**
+	 * Blank constructor as required for Java bean
+	 */
 	public Article()
 	{
 		
 	}
 	
+	/**
+	 * Overloaded constructor that will set all fields
+	 * @param id
+	 * @param title
+	 * @param publishedDate
+	 * @param authorId
+	 * @param fullText
+	 * @param categoryTag
+	 * @param authorOnly
+	 * @throws ParseException
+	 */
 	public Article(long id, String title, String publishedDate, long authorId, String fullText, String categoryTag, boolean authorOnly) throws ParseException
 	{
 		this.id = id;
@@ -115,6 +128,10 @@ public class Article implements Serializable {
 		return this.title;
 	}
 	
+	/**
+	 * Validate this article to ensure it contains all required elements
+	 * @return
+	 */
 	public boolean isValid() {
 		if(title == null || title.equals("")) {
 			return false;
@@ -129,7 +146,10 @@ public class Article implements Serializable {
 	}
 	
 	
-	//Error messages
+	/**
+	 * Error messages for an Article
+	 * @return
+	 */
 	public HashMap<String,String> errors() {
 		HashMap<String,String> errors = new HashMap<String, String>();
 		if(title == null || title.equals("")) {
