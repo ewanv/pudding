@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ns2:articles xmlns:ns2="http://www.uts.edu.au/31284/wsd-diary">
+
+<!-- Article data including id, title, published date, author ID, full text and category tag -->
+
 	<article>
 		<id>7</id>
 		<title>Hazy morning for Sydney as smoke hangs over city</title>

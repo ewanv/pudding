@@ -3,32 +3,46 @@
 	targetNamespace="http://www.uts.edu.au/31284/wsd-diary" xmlns="http://www.uts.edu.au/31284/wsd-diary"
 	elementFormDefault="qualified">
 
-	<!-- Insert your type declarations here -->
-	<xs:simpleType name="date">
-	   <xs:restriction base="xs:string">
-	    <xs:pattern value="\d{1,2}/\d{1,2}/\d{4}"/>
-	   </xs:restriction>
-	</xs:simpleType>
+	<!-- Schema definition for Articles. In-built data types used for precision. 
+		Articles have an ID, title, published date, author ID, full text, category 
+		tag and an "Author only" flag. -->
 
-	<!-- Insert your element declarations here -->
+	<!-- Type Declarations -->
+		<xs:simpleType name="category">
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="News" />
+				<xs:enumeration value="Sport" />
+				<xs:enumeration value="Entertainment" />
+				<xs:enumeration value="Business" />
+				<xs:enumeration value="Technology" />
+			</xs:restriction>
+		</xs:simpleType>
+		
+		<xs:simpleType name="id">
+			<xs:restriction base="xs:long">
+				<xs:minInclusive value="1" />
+			</xs:restriction>
+		</xs:simpleType>
+
+	<!-- Element Declarations -->
 
 	<xs:element name="articles">
 		<xs:complexType>
 			<xs:sequence>
 
-							<xs:element name="article" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="id" type="xs:long" />
-										<xs:element name="title" type="xs:string" />
-										<xs:element name="publishedDate" type="xs:date" />
-										<xs:element name="authorId" type="xs:long" />
-										<xs:element name="fullText" type="xs:string" />
-										<xs:element name="categoryTag" type="xs:string" />
-										<xs:element name="authorOnly" type="xs:boolean" />
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
+				<xs:element name="article" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" type="xs:long" />
+							<xs:element name="title" type="xs:string" />
+							<xs:element name="publishedDate" type="xs:date" />
+							<xs:element name="authorId" type="xs:long" />
+							<xs:element name="fullText" type="xs:string" />
+							<xs:element name="categoryTag" type="category" />
+							<xs:element name="authorOnly" type="xs:boolean" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
 
 			</xs:sequence>
 		</xs:complexType>
