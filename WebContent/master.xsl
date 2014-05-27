@@ -45,6 +45,9 @@
 					<xsl:choose>
 						<xsl:when test="loggedInAuthor">
 							<li>
+								<a href="author.jsp?id={loggedInAuthor/@id}">My Profile</a>
+							</li>
+							<li>
 								<a href="postArticle.jsp">Post Article</a>
 							</li>
 							<li>
