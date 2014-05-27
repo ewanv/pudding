@@ -3,30 +3,33 @@
 	targetNamespace="http://www.uts.edu.au/31284/wsd-diary" xmlns="http://www.uts.edu.au/31284/wsd-diary"
 	elementFormDefault="qualified">
 
-	<!-- Insert your type declarations here -->
-	<xs:simpleType name="date">
-	   <xs:restriction base="xs:string">
-	    <xs:pattern value="\d{1,2}/\d{1,2}/\d{4}"/>
-	   </xs:restriction>
-	</xs:simpleType>
-	<!-- Insert your element declarations here -->
+	<!-- Schema definition for Authors. In-built data types used for precision. 
+		Authors have an ID, name, date of birth, bio, username and password. -->
 
+	<!-- Type declarations -->
+	<xs:simpleType name="id">
+		<xs:restriction base="xs:long">
+			<xs:minInclusive value="1" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- Element declarations -->
 	<xs:element name="authors">
 		<xs:complexType>
 			<xs:sequence>
 
-							<xs:element name="author" maxOccurs="unbounded">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="id" type="xs:long"/>
-										<xs:element name="name" type="xs:string" />
-										<xs:element name="dateOfBirth" type="xs:date" />
-										<xs:element name="bio" type="xs:string" />
-										<xs:element name="username" type="xs:string" />
-										<xs:element name="password" type="xs:string" />
-									</xs:sequence>
-								</xs:complexType>
-							</xs:element>
+				<xs:element name="author" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" type="id" />
+							<xs:element name="name" type="xs:string" />
+							<xs:element name="dateOfBirth" type="xs:date" />
+							<xs:element name="bio" type="xs:string" />
+							<xs:element name="username" type="xs:string" />
+							<xs:element name="password" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
 
 
 			</xs:sequence>
