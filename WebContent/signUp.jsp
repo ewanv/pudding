@@ -70,6 +70,6 @@
 		<textField title="Name" name="name" value="<%= author.getName() != null ? author.getName() : "" %>"/>
 		<textArea title="Biography" name="bio" value="<%= author.getBio() != null ? author.getBio() : "" %>"/>
 		<textField title="Date of Birth (dd/mm/yyyy)" name="dateOfBirth" value="<%= formattedDateOfBirth  %>"/>
-		<submitButton title="Post Article"/>
+		<submitButton title="Sign Up"/>
 	</form>
 </page>
